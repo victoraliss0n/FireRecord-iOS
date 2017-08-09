@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'FireRecord'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of FireRecord.'
+  s.summary          = 'Swift ActiveRecord-inspired model for Firebase.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,17 +18,18 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
+    An ActiveRecord architecture above coreData written in Swift. PS: We are still in the early phase of the project
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/victoralissont5@gmail.com/FireRecord'
+  s.homepage         = 'https://github.com/victoraliss0n/FireRecord'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'victoralissont5@gmail.com' => 'victoralissont5@gmail.com' }
-  s.source           = { :git => 'https://github.com/victoralissont5@gmail.com/FireRecord.git', :tag => s.version.to_s }
+  s.author           = { 'Victor Alisson' => 'victoralissont5@gmail.com' }
+  s.source           = { :git => 'https://github.com/victoraliss0n/FireRecord.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'FireRecord/Classes/**/*'
   
