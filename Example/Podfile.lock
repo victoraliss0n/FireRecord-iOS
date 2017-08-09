@@ -1,0 +1,23 @@
+PODS:
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - FireRecord (0.1.0)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - FireRecord (from `../`)
+
+EXTERNAL SOURCES:
+  FireRecord:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  FireRecord: c119181fe34fcb58ff15f45c06af34b988ea5d37
+
+PODFILE CHECKSUM: 1020957256d334fa69a1502b7a4df04b8c1a880d
+
+COCOAPODS: 1.2.1

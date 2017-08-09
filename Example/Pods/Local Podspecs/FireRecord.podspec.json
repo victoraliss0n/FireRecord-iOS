@@ -1,0 +1,22 @@
+{
+  "name": "FireRecord",
+  "version": "0.1.0",
+  "summary": "A short description of FireRecord.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/victoralissont5@gmail.com/FireRecord",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "victoralissont5@gmail.com": "victoralissont5@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/victoralissont5@gmail.com/FireRecord.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "FireRecord/Classes/**/*"
+}

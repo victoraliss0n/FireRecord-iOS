@@ -1,0 +1,6 @@
+framework module FireRecord {
+  umbrella header "FireRecord-umbrella.h"
+
+  export *
+  module * { export * }
+}
