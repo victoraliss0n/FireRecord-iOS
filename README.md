@@ -22,7 +22,7 @@ pod "FireRecord"
 
 ## Author
 
-victoralissont5@gmail.com, victoralissont5@gmail.com
+Victor Alisson, victoralissont5@gmail.com
 
 ## License
 
