@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'FireRecord_Example' do
+  pod 'FireRecord', :path => '../'
+
+  target 'FireRecord_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase'
+  end
+end
