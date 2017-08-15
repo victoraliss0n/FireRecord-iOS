@@ -381,6 +381,9 @@
 		D897BFE3A3D2C97C6E88E05942E1597D /* Pods-FireRecord_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 913D89399B22DD687F9E50CA42405DDE /* Pods-FireRecord_Tests-dummy.m */; };
 		D9B8E816430E6BD9EF3E196E4E539AE9 /* FTrackedQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 940CF0926A066089C084A09691A5DADF /* FTrackedQuery.m */; };
 		D9C247B2B3EA8BE1175CF0FFABAA9EE7 /* GTMSessionFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 62C1CAF38798EB11F66C17AC689CEE15 /* GTMSessionFetcher.m */; };
+		DA38731D1F42D9B200AF1053 /* Writeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA38731C1F42D9B200AF1053 /* Writeable.swift */; };
+		DA38731F1F42DAB700AF1053 /* Deletable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA38731E1F42DAB700AF1053 /* Deletable.swift */; };
+		DA3873211F42DADA00AF1053 /* Updatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3873201F42DADA00AF1053 /* Updatable.swift */; };
 		DA5F803E394A938A119E5D7592021D11 /* FDataEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 99100D260E7B387DBBD6BC1BADEBDFFB /* FDataEvent.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		DA8FC0D848FA681808F78656995636C5 /* FOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 29C88855C3EC0BB4DC136E44CB0B9986 /* FOperation.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		DA91CEAA06AC97D926087654B512CDF8 /* FIRStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7597D359CA5F296CF341FD4B0F06A434 /* FIRStorage.m */; };
@@ -936,6 +939,9 @@
 		D8CD5F709D1741DC74008D941A943239 /* FIRApp.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRApp.m; path = Firebase/Core/FIRApp.m; sourceTree = "<group>"; };
 		D8EA92C3AC0045C9C5720561B3D1B750 /* filter_block.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = filter_block.cc; path = table/filter_block.cc; sourceTree = "<group>"; };
 		D9F63E40C777DC34468634A26D56BEEB /* FEventEmitter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FEventEmitter.m; path = Firebase/Database/Utilities/FEventEmitter.m; sourceTree = "<group>"; };
+		DA38731C1F42D9B200AF1053 /* Writeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Writeable.swift; sourceTree = "<group>"; };
+		DA38731E1F42DAB700AF1053 /* Deletable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deletable.swift; sourceTree = "<group>"; };
+		DA3873201F42DADA00AF1053 /* Updatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updatable.swift; sourceTree = "<group>"; };
 		DAB5002035C937DF82551DB1BBB1D037 /* FIRApp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRApp.h; path = Firebase/Core/FIRApp.h; sourceTree = "<group>"; };
 		DBC8A3D3824943C6F5F0A8ACC85A44F6 /* Pods-FireRecord_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FireRecord_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		DE1E9C4602F0C42DD83BFD9914823E68 /* FEventRaiser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FEventRaiser.m; path = Firebase/Database/Core/View/FEventRaiser.m; sourceTree = "<group>"; };
@@ -1280,6 +1286,7 @@
 		83F41F28D47BA2BC193965D26593F3E2 /* FireRecord */ = {
 			isa = PBXGroup;
 			children = (
+				DA38731B1F42D9A500AF1053 /* Protocols */,
 				DC49F2F7D52D21952552FA49BBE61375 /* Classes */,
 			);
 			path = FireRecord;
@@ -1473,6 +1480,16 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/GoogleToolboxForMac";
+			sourceTree = "<group>";
+		};
+		DA38731B1F42D9A500AF1053 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DA38731C1F42D9B200AF1053 /* Writeable.swift */,
+				DA38731E1F42DAB700AF1053 /* Deletable.swift */,
+				DA3873201F42DADA00AF1053 /* Updatable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		DC49F2F7D52D21952552FA49BBE61375 /* Classes */ = {
@@ -2259,6 +2276,7 @@
 				12AC081D15732919D3848ACE25691C81 /* FIRBundleUtil.m in Sources */,
 				31608D881961FBE60A1E69B775AFDDF9 /* FIRConfiguration.m in Sources */,
 				550E0ADB3C5B023F016B06910F132850 /* FIRDatabase.m in Sources */,
+				DA38731F1F42DAB700AF1053 /* Deletable.swift in Sources */,
 				F48AC2F81D983D42A8D16252452B6D98 /* FIRDatabaseConfig.m in Sources */,
 				8DA4DEE872D671EF9AEA37C6B72AD5B1 /* FIRDatabaseQuery.m in Sources */,
 				0F487E22AFA6FED9C8DE548272A5D0A1 /* FIRDatabaseReference.m in Sources */,
@@ -2279,6 +2297,7 @@
 				DA91CEAA06AC97D926087654B512CDF8 /* FIRStorage.m in Sources */,
 				26B5839977EB2C97C9D9656B15FA151B /* FIRStorageConstants.m in Sources */,
 				E33AB4A740DFD6939A607373EF1A1748 /* FIRStorageDeleteTask.m in Sources */,
+				DA3873211F42DADA00AF1053 /* Updatable.swift in Sources */,
 				91BA33A31DAA1D83C64CE43FD2242B15 /* FIRStorageDownloadTask.m in Sources */,
 				38ACA2DDE260BA2436E352E7F3C7A5DB /* FIRStorageErrors.m in Sources */,
 				17184D2C0D048C0CC80E104DFC7F7CA4 /* FIRStorageGetMetadataTask.m in Sources */,
@@ -2294,6 +2313,7 @@
 				3F684DF1FD7A4CA536BE42C3FDA200EC /* FIRStorageUtils.m in Sources */,
 				C49077D763924150108041ECBCEBC2B3 /* FIRTransactionResult.m in Sources */,
 				699D0A86EB9D4893F6E5143C000EAE38 /* FIRURLSchemeUtil.m in Sources */,
+				DA38731D1F42D9B200AF1053 /* Writeable.swift in Sources */,
 				2A7CA00A8C3DD5A8D4B323810139BB1E /* FKeepSyncedEventRegistration.m in Sources */,
 				54AC3F02085C0A448FE80FA0A2038B93 /* FKeyIndex.m in Sources */,
 				017754A22FD6176A044444B05E9D032D /* FLeafNode.m in Sources */,
