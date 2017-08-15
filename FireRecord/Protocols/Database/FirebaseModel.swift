@@ -7,8 +7,6 @@
 
 import Foundation
 
-import Foundation
-
 protocol FirebaseModel: ModelType {
     var key: String? { get set }
     func toJSONObject() -> [String: AnyObject]
