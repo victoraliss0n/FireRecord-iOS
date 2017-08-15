@@ -384,6 +384,8 @@
 		DA38731D1F42D9B200AF1053 /* Writeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA38731C1F42D9B200AF1053 /* Writeable.swift */; };
 		DA38731F1F42DAB700AF1053 /* Deletable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA38731E1F42DAB700AF1053 /* Deletable.swift */; };
 		DA3873211F42DADA00AF1053 /* Updatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3873201F42DADA00AF1053 /* Updatable.swift */; };
+		DA3873231F42DCB200AF1053 /* Readable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3873221F42DCB200AF1053 /* Readable.swift */; };
+		DA3873251F42DCE600AF1053 /* Filterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3873241F42DCE600AF1053 /* Filterable.swift */; };
 		DA5F803E394A938A119E5D7592021D11 /* FDataEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 99100D260E7B387DBBD6BC1BADEBDFFB /* FDataEvent.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		DA8FC0D848FA681808F78656995636C5 /* FOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 29C88855C3EC0BB4DC136E44CB0B9986 /* FOperation.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		DA91CEAA06AC97D926087654B512CDF8 /* FIRStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7597D359CA5F296CF341FD4B0F06A434 /* FIRStorage.m */; };
@@ -942,6 +944,8 @@
 		DA38731C1F42D9B200AF1053 /* Writeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Writeable.swift; sourceTree = "<group>"; };
 		DA38731E1F42DAB700AF1053 /* Deletable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deletable.swift; sourceTree = "<group>"; };
 		DA3873201F42DADA00AF1053 /* Updatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updatable.swift; sourceTree = "<group>"; };
+		DA3873221F42DCB200AF1053 /* Readable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Readable.swift; sourceTree = "<group>"; };
+		DA3873241F42DCE600AF1053 /* Filterable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filterable.swift; sourceTree = "<group>"; };
 		DAB5002035C937DF82551DB1BBB1D037 /* FIRApp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRApp.h; path = Firebase/Core/FIRApp.h; sourceTree = "<group>"; };
 		DBC8A3D3824943C6F5F0A8ACC85A44F6 /* Pods-FireRecord_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FireRecord_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		DE1E9C4602F0C42DD83BFD9914823E68 /* FEventRaiser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FEventRaiser.m; path = Firebase/Database/Core/View/FEventRaiser.m; sourceTree = "<group>"; };
@@ -1488,6 +1492,8 @@
 				DA38731C1F42D9B200AF1053 /* Writeable.swift */,
 				DA38731E1F42DAB700AF1053 /* Deletable.swift */,
 				DA3873201F42DADA00AF1053 /* Updatable.swift */,
+				DA3873221F42DCB200AF1053 /* Readable.swift */,
+				DA3873241F42DCE600AF1053 /* Filterable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -2357,6 +2363,7 @@
 				2A2F390AA3308DCB09344700E2BD4869 /* FTransformedEnumerator.m in Sources */,
 				6A84E75D44CA32960553F4626BA34D89 /* FTree.m in Sources */,
 				F48A9346BF4C60013418BD1777DB5FAF /* FTreeNode.m in Sources */,
+				DA3873251F42DCE600AF1053 /* Filterable.swift in Sources */,
 				D726306B51D2221391A4512AB570D612 /* FTreeSortedDictionary.m in Sources */,
 				31EF6AE95E34239124E8D4B8670079EE /* FTreeSortedDictionaryEnumerator.m in Sources */,
 				402C33631170704C82AB28A61E981AF7 /* FTupleBoolBlock.m in Sources */,
@@ -2373,6 +2380,7 @@
 				7A245A632B1ECFEC56B15E732755788E /* FTupleTransaction.m in Sources */,
 				3C0166E16EDF10CAD89BC7C3C08CB9BE /* FTupleTSN.m in Sources */,
 				25E724268AA18D44467418528708B594 /* FTupleUserCallback.m in Sources */,
+				DA3873231F42DCB200AF1053 /* Readable.swift in Sources */,
 				1B84EBAE9AAEC5EF2A70F076C9E691A7 /* FUtilities.m in Sources */,
 				B841229A8A0CEC20630413004F29D6DF /* FValidation.m in Sources */,
 				840D43C810853C3A2B497B03E751B90A /* FValueEventRegistration.m in Sources */,
