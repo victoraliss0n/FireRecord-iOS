@@ -1,7 +1,7 @@
 import FirebaseCommunity
 
 public class FireRecord{
- static func configure() {
+ public static func configure() {
         FirebaseApp.configure()
     }
 }

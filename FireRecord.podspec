@@ -39,6 +39,6 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'Firebase/Database'
-  s.dependency 'Firebase/Storage'
+  s.dependency 'FirebaseCommunity/Database'
+  s.dependency 'FirebaseCommunity/Storage'
 end
