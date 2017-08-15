@@ -1,9 +1,4 @@
 PODS:
-  - FBSnapshotTestCase (2.1.4):
-    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
-  - FBSnapshotTestCase/Core (2.1.4)
-  - FBSnapshotTestCase/SwiftSupport (2.1.4):
-    - FBSnapshotTestCase/Core
   - FirebaseCommunity/Core (0.0.1):
     - FirebaseCommunity/Root
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
@@ -24,7 +19,6 @@ PODS:
   - leveldb-library (1.18.3)
 
 DEPENDENCIES:
-  - FBSnapshotTestCase
   - FireRecord (from `../`)
 
 EXTERNAL SOURCES:
@@ -32,13 +26,12 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   FirebaseCommunity: 3180af8da9e96e4e0114999eeebd8896c43e848f
   FireRecord: 0a849f820f6309bb410f9909bb3195f0f714ac84
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMSessionFetcher: 30d874b96d0d76028f61fbd122801e3f030d47db
   leveldb-library: 10fb39c39e243db4af1828441162405bbcec1404
 
-PODFILE CHECKSUM: 1020957256d334fa69a1502b7a4df04b8c1a880d
+PODFILE CHECKSUM: 1951834761d98d1932f3246638f368dec8060fe3
 
 COCOAPODS: 1.2.1

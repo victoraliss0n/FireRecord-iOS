@@ -32,6 +32,7 @@ s.source           = { :git => 'https://github.com/victoraliss0n/FireRecord.git'
 s.ios.deployment_target = '11.0'
 s.source_files = 'FireRecord/Classes/**/*'
 
+
 # s.resource_bundles = {
 #   'FireRecord' => ['FireRecord/Assets/*.png']
 # }

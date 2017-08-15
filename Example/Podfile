@@ -5,7 +5,5 @@ target 'FireRecord_Example' do
 
   target 'FireRecord_Tests' do
     inherit! :search_paths
-
-    pod 'FBSnapshotTestCase'
   end
 end
