@@ -14,6 +14,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		E79C535E1F42B68400B52EBB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E79C535D1F42B66600B52EBB /* GoogleService-Info.plist */; };
 		F2169AC50973C53026DF17A6 /* Pods_FireRecord_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ECBE57253A963E326C4DBA6 /* Pods_FireRecord_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,7 +47,7 @@
 		9FDD8192BE475B8854AB3CED /* Pods-FireRecord_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireRecord_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-FireRecord_Example/Pods-FireRecord_Example.release.xcconfig"; sourceTree = "<group>"; };
 		C5E3A424ACE439661E416A36 /* Pods_FireRecord_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FireRecord_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7234F212E98C693FEC8F436 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		E7557C8B1F423721001A0BAB /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E79C535D1F42B66600B52EBB /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EE612B6CB2FA833F7EC875F2 /* Pods-FireRecord_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireRecord_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FireRecord_Tests/Pods-FireRecord_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,9 +106,9 @@
 		607FACD21AFB9204008FA782 /* Example for FireRecord */ = {
 			isa = PBXGroup;
 			children = (
+				E79C535D1F42B66600B52EBB /* GoogleService-Info.plist */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				E7557C8B1F423721001A0BAB /* GoogleService-Info.plist */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -251,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				E79C535E1F42B68400B52EBB /* GoogleService-Info.plist in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
