@@ -388,6 +388,7 @@
 		DA3873251F42DCE600AF1053 /* Filterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3873241F42DCE600AF1053 /* Filterable.swift */; };
 		DA3873271F42DDED00AF1053 /* ActiveRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3873261F42DDED00AF1053 /* ActiveRecord.swift */; };
 		DA3873291F42DE1F00AF1053 /* ModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3873281F42DE1F00AF1053 /* ModelType.swift */; };
+		DA38732B1F42E06100AF1053 /* FirebaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA38732A1F42E06100AF1053 /* FirebaseModel.swift */; };
 		DA5F803E394A938A119E5D7592021D11 /* FDataEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 99100D260E7B387DBBD6BC1BADEBDFFB /* FDataEvent.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		DA8FC0D848FA681808F78656995636C5 /* FOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 29C88855C3EC0BB4DC136E44CB0B9986 /* FOperation.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		DA91CEAA06AC97D926087654B512CDF8 /* FIRStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7597D359CA5F296CF341FD4B0F06A434 /* FIRStorage.m */; };
@@ -950,6 +951,7 @@
 		DA3873241F42DCE600AF1053 /* Filterable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filterable.swift; sourceTree = "<group>"; };
 		DA3873261F42DDED00AF1053 /* ActiveRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveRecord.swift; sourceTree = "<group>"; };
 		DA3873281F42DE1F00AF1053 /* ModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelType.swift; sourceTree = "<group>"; };
+		DA38732A1F42E06100AF1053 /* FirebaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseModel.swift; sourceTree = "<group>"; };
 		DAB5002035C937DF82551DB1BBB1D037 /* FIRApp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRApp.h; path = Firebase/Core/FIRApp.h; sourceTree = "<group>"; };
 		DBC8A3D3824943C6F5F0A8ACC85A44F6 /* Pods-FireRecord_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FireRecord_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		DE1E9C4602F0C42DD83BFD9914823E68 /* FEventRaiser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FEventRaiser.m; path = Firebase/Database/Core/View/FEventRaiser.m; sourceTree = "<group>"; };
@@ -1500,6 +1502,7 @@
 				DA3873241F42DCE600AF1053 /* Filterable.swift */,
 				DA3873261F42DDED00AF1053 /* ActiveRecord.swift */,
 				DA3873281F42DE1F00AF1053 /* ModelType.swift */,
+				DA38732A1F42E06100AF1053 /* FirebaseModel.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -2356,6 +2359,7 @@
 				37ABC3E8CA676C1DC6A3894E1CA2F2C9 /* FRepo.m in Sources */,
 				51BC76F0B854997CDEF965D862BD4178 /* FRepoInfo.m in Sources */,
 				748ACF9C80D09B7908B4606D3D703244 /* FRepoManager.m in Sources */,
+				DA38732B1F42E06100AF1053 /* FirebaseModel.swift in Sources */,
 				DA3873271F42DDED00AF1053 /* ActiveRecord.swift in Sources */,
 				4FFD583DB1DA478C500661139A7137AC /* FServerValues.m in Sources */,
 				1D8850F30EE6BC605FF60F9728BEC6D4 /* FSnapshotHolder.m in Sources */,
