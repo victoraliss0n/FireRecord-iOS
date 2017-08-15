@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import FireRecord
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        FireRecord.configure()
     }
 
     override func didReceiveMemoryWarning() {
