@@ -381,6 +381,16 @@
 		D897BFE3A3D2C97C6E88E05942E1597D /* Pods-FireRecord_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 913D89399B22DD687F9E50CA42405DDE /* Pods-FireRecord_Tests-dummy.m */; };
 		D9B8E816430E6BD9EF3E196E4E539AE9 /* FTrackedQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 940CF0926A066089C084A09691A5DADF /* FTrackedQuery.m */; };
 		D9C247B2B3EA8BE1175CF0FFABAA9EE7 /* GTMSessionFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 62C1CAF38798EB11F66C17AC689CEE15 /* GTMSessionFetcher.m */; };
+		DA44B1B31F43FD04005C7316 /* FireRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AC575BD6A3AE9BE42EE40F734F831B /* FireRecord.swift */; };
+		DA44B1C71F43FED0005C7316 /* ModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3873281F42DE1F00AF1053 /* ModelType.swift */; };
+		DA44B1C81F43FED7005C7316 /* ActiveRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3873261F42DDED00AF1053 /* ActiveRecord.swift */; };
+		DA44B1C91F43FEDC005C7316 /* Filterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3873241F42DCE600AF1053 /* Filterable.swift */; };
+		DA44B1CA1F43FEE0005C7316 /* Readable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3873221F42DCB200AF1053 /* Readable.swift */; };
+		DA44B1CB1F43FEE3005C7316 /* Updatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3873201F42DADA00AF1053 /* Updatable.swift */; };
+		DA44B1CC1F43FEE6005C7316 /* Deletable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA38731E1F42DAB700AF1053 /* Deletable.swift */; };
+		DA44B1CD1F43FEE9005C7316 /* Writeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA38731C1F42D9B200AF1053 /* Writeable.swift */; };
+		DA44B1CE1F43FEED005C7316 /* Writeable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACCB0511F43F86700CE28C6 /* Writeable+Extension.swift */; };
+		DA44B1CF1F43FEF1005C7316 /* FirebaseModel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACCB0501F43F86700CE28C6 /* FirebaseModel+Extension.swift */; };
 		DA5F803E394A938A119E5D7592021D11 /* FDataEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 99100D260E7B387DBBD6BC1BADEBDFFB /* FDataEvent.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		DA8FC0D848FA681808F78656995636C5 /* FOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 29C88855C3EC0BB4DC136E44CB0B9986 /* FOperation.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		DA91CEAA06AC97D926087654B512CDF8 /* FIRStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7597D359CA5F296CF341FD4B0F06A434 /* FIRStorage.m */; };
@@ -939,6 +949,8 @@
 		D8EA92C3AC0045C9C5720561B3D1B750 /* filter_block.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = filter_block.cc; path = table/filter_block.cc; sourceTree = "<group>"; };
 		D9F63E40C777DC34468634A26D56BEEB /* FEventEmitter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FEventEmitter.m; path = Firebase/Database/Utilities/FEventEmitter.m; sourceTree = "<group>"; };
 		DAB5002035C937DF82551DB1BBB1D037 /* FIRApp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRApp.h; path = Firebase/Core/FIRApp.h; sourceTree = "<group>"; };
+		DACCB0501F43F86700CE28C6 /* FirebaseModel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FirebaseModel+Extension.swift"; sourceTree = "<group>"; };
+		DACCB0511F43F86700CE28C6 /* Writeable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Writeable+Extension.swift"; sourceTree = "<group>"; };
 		DBC8A3D3824943C6F5F0A8ACC85A44F6 /* Pods-FireRecord_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FireRecord_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		DD695AA1444FEC25674B8A5A97A88D03 /* FirebaseImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FirebaseImage.swift; sourceTree = "<group>"; };
 		DE1E9C4602F0C42DD83BFD9914823E68 /* FEventRaiser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FEventRaiser.m; path = Firebase/Database/Core/View/FEventRaiser.m; sourceTree = "<group>"; };
@@ -2462,6 +2474,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA44B1B31F43FD04005C7316 /* FireRecord.swift in Sources */,
 				CE39A5F43B829287DD0357340CD8C0B5 /* Pods-FireRecord_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

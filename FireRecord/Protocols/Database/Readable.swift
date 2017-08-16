@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol Readable: Filterable {
+public protocol Readable: Filterable {
     static func all(completion: @escaping (_ error: Error?) -> Void) -> [Self]
 }
