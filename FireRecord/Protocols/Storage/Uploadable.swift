@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FirebaseCommunity
 
 protocol Uploadable {
     func upload(with name: String, and reference: StorageReference)

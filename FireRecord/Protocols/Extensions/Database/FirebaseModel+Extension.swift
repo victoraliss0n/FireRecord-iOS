@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FirebaseCommunity
 
 public extension FirebaseModel {
     typealias JSON = [String: Any]

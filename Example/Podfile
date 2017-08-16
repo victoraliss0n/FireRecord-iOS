@@ -1,9 +1,11 @@
 use_frameworks!
 
+platform :ios, '11.0'
+
 target 'FireRecord_Example' do
   pod 'FireRecord', :path => '../'
 
-  target 'FireRecord_Tests' do
+target 'FireRecord_Tests' do
     inherit! :search_paths
   end
 end

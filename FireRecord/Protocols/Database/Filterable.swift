@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol Filterable {
+public protocol Filterable {
     static func filter(completion: @escaping (_ error: Error?) -> Void) ->
           [Self]
 }
