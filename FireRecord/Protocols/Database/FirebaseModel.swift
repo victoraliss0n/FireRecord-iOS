@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol FirebaseModel: ModelType {
+public protocol FirebaseModel: ModelType where Reference == DatabaseReference {
     var key: String? { get set }
-    func toJSONObject() -> [String: AnyObject]
+    func toJSON() -> [String: Any]
 }
