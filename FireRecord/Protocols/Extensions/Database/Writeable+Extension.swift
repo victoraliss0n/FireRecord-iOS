@@ -10,7 +10,7 @@ import Foundation
 public extension Writeable where Self: FirebaseModel {
     
     func save(completion: @escaping (_ error: Error?) -> Void) {
-        Self.path.setValue(self.toJSON()) { (error, reference) in
+        Self.path.child(Self.autoId).setValue(self.toJSON()) { (error, reference) in
             completion(error)
         }
     }

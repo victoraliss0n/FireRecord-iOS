@@ -11,8 +11,11 @@ import FirebaseCommunity
 public extension FirebaseModel {
     typealias JSON = [String: Any]
     
-    static var path: DatabaseReference {
-        return Database.database().reference().child(Self.className)
+    static var path: Reference {
+        return reference.child(Self.className)
+    }
+    static var reference: Reference {
+        return Database.database().reference()
     }
     static var className: String {
         return String(describing: self)
@@ -20,9 +23,7 @@ public extension FirebaseModel {
     static var autoId: String {
         return Self.reference.childByAutoId().key
     }
-    var key: String {
-        return Self.reference.childByAutoId().key
-    }
+    
     func toJSON() -> JSON {
         guard let jsonData = try? JSONEncoder().encode(self) else {
             return JSON()
