@@ -17,7 +17,7 @@ public extension FirebaseModel {
     static var reference: Reference {
         return Database.database().reference()
     }
-    static var className: String {
+    internal static var className: String {
         return String(describing: self)
     }
     static var autoId: String {
