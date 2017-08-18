@@ -7,6 +7,6 @@
 
 import Foundation
 
-class FirebaseImage {
+public class FirebaseImage {
     
 }
