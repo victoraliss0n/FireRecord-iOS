@@ -26,7 +26,7 @@ public extension FirebaseStorable {
             return
         }
         
-        let uploadTask = Self.reference.child("images/chupa").putData(data, metadata: StorageMetadata()) { (metadata, error) in
+        let uploadTask = Self.reference.child("images/decentPath").putData(data, metadata: StorageMetadata()) { (metadata, error) in
             
             if let error = error{
                 print(error.localizedDescription as Any)
