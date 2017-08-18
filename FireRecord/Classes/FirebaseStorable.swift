@@ -12,8 +12,7 @@ public protocol FirebaseStorable: Storable {
     
 }
 
-public extension FirebaseStorable {
-    public typealias Reference = StorageReference
+public extension FirebaseStorable where Reference == StorageReference {
     
     public static var reference: StorageReference {
         return Storage.storage().reference()
