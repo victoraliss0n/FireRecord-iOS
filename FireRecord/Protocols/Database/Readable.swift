@@ -8,5 +8,5 @@
 import Foundation
 
 public protocol Readable: Filterable {
-    static func all(completion: @escaping (_ error: Error?) -> Void) -> [Self]
+    static func all(completion: @escaping (_ objects: [FireRecordType]) -> Void)
 }

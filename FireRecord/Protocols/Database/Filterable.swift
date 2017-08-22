@@ -8,6 +8,7 @@
 import Foundation
 
 public protocol Filterable {
-    static func filter(completion: @escaping (_ error: Error?) -> Void) ->
-          [Self]
+    associatedtype FireRecordType = Self
+    
+    static func findFirst(completion: @escaping (_ object: FireRecordType) -> Void)
 }
