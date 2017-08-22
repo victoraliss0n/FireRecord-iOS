@@ -7,6 +7,11 @@
 
 import Foundation
 
-class FirebaseFile {
+public class FirebaseFile: FirebaseStorable {
     
+    public var data: Data?
+    
+    public init() {
+        
+    }
 }
