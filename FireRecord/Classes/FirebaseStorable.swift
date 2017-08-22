@@ -8,11 +8,11 @@
 import Foundation
 import FirebaseCommunity
 
-public protocol FirebaseStorable: Storable {
+public protocol FirebaseStorable: Storable where Reference == StorageReference  {
     
 }
 
-public extension FirebaseStorable where Reference == StorageReference {
+public extension FirebaseStorable {
     
     public static var reference: StorageReference {
         return Storage.storage().reference()
