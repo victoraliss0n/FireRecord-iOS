@@ -1279,24 +1279,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		726CA8B35019F8023399C801CFCCAA4A /* Classes */ = {
+		726CA8B35019F8023399C801CFCCAA4A /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				E7A9ED6F1F45D657002E4296 /* Protocols */,
+				E7A9ED791F45D657002E4296 /* Extensions */,
 				E7A9ED801F45D657002E4296 /* FirebaseStorable.swift */,
-				E7A9ED811F45D657002E4296 /* Storable.swift */,
-				E7A9ED821F45D657002E4296 /* Uploadable.swift */,
 				F6FCC0C7CF2FC1274E3EA8E6782A0185 /* FirebaseFile.swift */,
 				DD695AA1444FEC25674B8A5A97A88D03 /* FirebaseImage.swift */,
 				D0862F3398D0D7CCE69AFE73456606BB /* FireRecord.swift */,
 			);
-			path = Classes;
+			path = Source;
 			sourceTree = "<group>";
 		};
 		731332E0B9947206F5AF5370B38670C4 /* FireRecord */ = {
 			isa = PBXGroup;
 			children = (
-				E7A9ED6F1F45D657002E4296 /* Protocols */,
-				726CA8B35019F8023399C801CFCCAA4A /* Classes */,
+				726CA8B35019F8023399C801CFCCAA4A /* Source */,
 			);
 			path = FireRecord;
 			sourceTree = "<group>";
@@ -1523,9 +1522,8 @@
 		E7A9ED6F1F45D657002E4296 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				E7A9ED701F45D657002E4296 /* Database */,
-				E7A9ED791F45D657002E4296 /* Extensions */,
 				E7A9ED7F1F45D657002E4296 /* Storage */,
+				E7A9ED701F45D657002E4296 /* Database */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -1567,8 +1565,11 @@
 		E7A9ED7F1F45D657002E4296 /* Storage */ = {
 			isa = PBXGroup;
 			children = (
+				E7A9ED811F45D657002E4296 /* Storable.swift */,
+				E7A9ED821F45D657002E4296 /* Uploadable.swift */,
 			);
-			path = Storage;
+			name = Storage;
+			path = ../../Protocols/Storage;
 			sourceTree = "<group>";
 		};
 		F363C865E60E4CC2ECF7FD474365F94E /* Targets Support Files */ = {
