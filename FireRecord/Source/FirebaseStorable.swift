@@ -8,18 +8,17 @@
 import Foundation
 import FirebaseCommunity
 
-public protocol FirebaseStorable: Storable where Reference == StorageReference  {
+protocol FirebaseStorable: Storable where Reference == StorageReference  {
     
 }
 
-public extension FirebaseStorable {
-    
+extension FirebaseStorable {
     public static var reference: StorageReference {
         return Storage.storage().reference()
     }
 }
 
-public extension FirebaseStorable {
+extension FirebaseStorable {
     public func upload(with name: String) {
         guard let data = data else {
             return

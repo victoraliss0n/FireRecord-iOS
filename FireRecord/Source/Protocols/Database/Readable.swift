@@ -7,6 +7,7 @@
 
 import Foundation
 
-public protocol Readable: Filterable {
+protocol Readable: Filterable {
     static func all(completion: @escaping (_ objects: [FireRecordType]) -> Void)
 }
+

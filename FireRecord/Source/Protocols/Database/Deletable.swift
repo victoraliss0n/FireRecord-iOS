@@ -7,6 +7,6 @@
 
 import Foundation
 
-public protocol Deletable {
+protocol Deletable {
      func destroy(completion: @escaping (_ error: Error?) -> Void)
 }

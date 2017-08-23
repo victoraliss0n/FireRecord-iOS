@@ -7,9 +7,10 @@
 
 import Foundation
 
-public extension Readable where Self: FirebaseModel {
-    static func all(completion: @escaping (_ object: [FireRecordType]
+extension Readable where Self: FirebaseModel {
+    static func all(completion: @escaping (_ object: [Self]
         ) -> Void)  {
         
     }
+
 }
