@@ -385,6 +385,20 @@
 		DA8FC0D848FA681808F78656995636C5 /* FOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 29C88855C3EC0BB4DC136E44CB0B9986 /* FOperation.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		DA91CEAA06AC97D926087654B512CDF8 /* FIRStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7597D359CA5F296CF341FD4B0F06A434 /* FIRStorage.m */; };
 		DA99893C89D68C1B26F6573BA8D68DE0 /* FChange.m in Sources */ = {isa = PBXBuildFile; fileRef = 4551ADA0C1F1DB502F575EFF55518281 /* FChange.m */; };
+		DACE84031F4E00500039E555 /* FirebaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A9ED741F45D657002E4296 /* FirebaseModel.swift */; };
+		DACE84041F4E00530039E555 /* ModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A9ED751F45D657002E4296 /* ModelType.swift */; };
+		DACE84051F4E00560039E555 /* Readable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A9ED761F45D657002E4296 /* Readable.swift */; };
+		DACE84061F4E00580039E555 /* Updatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A9ED771F45D657002E4296 /* Updatable.swift */; };
+		DACE84071F4E005B0039E555 /* Writeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A9ED781F45D657002E4296 /* Writeable.swift */; };
+		DACE84081F4E005E0039E555 /* ActiveRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A9ED711F45D657002E4296 /* ActiveRecord.swift */; };
+		DACE84091F4E00600039E555 /* Deletable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A9ED721F45D657002E4296 /* Deletable.swift */; };
+		DACE840A1F4E00620039E555 /* Filterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A9ED731F45D657002E4296 /* Filterable.swift */; };
+		DACE840D1F4E01120039E555 /* Filterable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACE840C1F4E00C10039E555 /* Filterable+Extension.swift */; };
+		DACE840E1F4E01150039E555 /* Readable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACE840B1F4E00C10039E555 /* Readable+Extension.swift */; };
+		DACE840F1F4E011E0039E555 /* Deletable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A9ED7B1F45D657002E4296 /* Deletable+Extension.swift */; };
+		DACE84101F4E01200039E555 /* FirebaseModel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A9ED7C1F45D657002E4296 /* FirebaseModel+Extension.swift */; };
+		DACE84111F4E01270039E555 /* Updatable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A9ED7D1F45D657002E4296 /* Updatable+Extension.swift */; };
+		DACE84121F4E012A0039E555 /* Writeable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A9ED7E1F45D657002E4296 /* Writeable+Extension.swift */; };
 		DCAE354C43D4338D7D84B82882B2C2FE /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E5537643C387965C2005453FE112F4 /* GTMSessionFetcher.framework */; };
 		DDC66E28E5D0092CB40AF6A8FF06C6B7 /* FCancelEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 13CB8F538A393FF1C3B8C615AE128739 /* FCancelEvent.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		DDD3985A2FFBD63D2D9686DB9843D482 /* FireRecord-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E162626AC876B9B072D3280F306D6CB0 /* FireRecord-dummy.m */; };
@@ -942,6 +956,8 @@
 		D8EA92C3AC0045C9C5720561B3D1B750 /* filter_block.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = filter_block.cc; path = table/filter_block.cc; sourceTree = "<group>"; };
 		D9F63E40C777DC34468634A26D56BEEB /* FEventEmitter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FEventEmitter.m; path = Firebase/Database/Utilities/FEventEmitter.m; sourceTree = "<group>"; };
 		DAB5002035C937DF82551DB1BBB1D037 /* FIRApp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRApp.h; path = Firebase/Core/FIRApp.h; sourceTree = "<group>"; };
+		DACE840B1F4E00C10039E555 /* Readable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Readable+Extension.swift"; sourceTree = "<group>"; };
+		DACE840C1F4E00C10039E555 /* Filterable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Filterable+Extension.swift"; sourceTree = "<group>"; };
 		DBC8A3D3824943C6F5F0A8ACC85A44F6 /* Pods-FireRecord_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FireRecord_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		DD695AA1444FEC25674B8A5A97A88D03 /* FirebaseImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FirebaseImage.swift; sourceTree = "<group>"; };
 		DE1E9C4602F0C42DD83BFD9914823E68 /* FEventRaiser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FEventRaiser.m; path = Firebase/Database/Core/View/FEventRaiser.m; sourceTree = "<group>"; };
@@ -1285,9 +1301,9 @@
 				E7A9ED6F1F45D657002E4296 /* Protocols */,
 				E7A9ED791F45D657002E4296 /* Extensions */,
 				E7A9ED801F45D657002E4296 /* FirebaseStorable.swift */,
+				D0862F3398D0D7CCE69AFE73456606BB /* FireRecord.swift */,
 				F6FCC0C7CF2FC1274E3EA8E6782A0185 /* FirebaseFile.swift */,
 				DD695AA1444FEC25674B8A5A97A88D03 /* FirebaseImage.swift */,
-				D0862F3398D0D7CCE69AFE73456606BB /* FireRecord.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -1554,6 +1570,8 @@
 		E7A9ED7A1F45D657002E4296 /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				DACE840C1F4E00C10039E555 /* Filterable+Extension.swift */,
+				DACE840B1F4E00C10039E555 /* Readable+Extension.swift */,
 				E7A9ED7B1F45D657002E4296 /* Deletable+Extension.swift */,
 				E7A9ED7C1F45D657002E4296 /* FirebaseModel+Extension.swift */,
 				E7A9ED7D1F45D657002E4296 /* Updatable+Extension.swift */,
@@ -2498,13 +2516,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DACE840F1F4E011E0039E555 /* Deletable+Extension.swift in Sources */,
+				DACE84031F4E00500039E555 /* FirebaseModel.swift in Sources */,
+				DACE84051F4E00560039E555 /* Readable.swift in Sources */,
 				E7A9ED841F45D6DA002E4296 /* Uploadable.swift in Sources */,
+				DACE84061F4E00580039E555 /* Updatable.swift in Sources */,
 				E7A9ED851F45D6DA002E4296 /* Storable.swift in Sources */,
+				DACE84081F4E005E0039E555 /* ActiveRecord.swift in Sources */,
 				82361C021D4FB60DA2121B98AB375079 /* FirebaseFile.swift in Sources */,
+				DACE840D1F4E01120039E555 /* Filterable+Extension.swift in Sources */,
+				DACE840A1F4E00620039E555 /* Filterable.swift in Sources */,
+				DACE84041F4E00530039E555 /* ModelType.swift in Sources */,
 				E7A9ED831F45D6DA002E4296 /* FirebaseStorable.swift in Sources */,
 				94DA8F529CA344C33191F1759BEA2A86 /* FirebaseImage.swift in Sources */,
+				DACE84071F4E005B0039E555 /* Writeable.swift in Sources */,
+				DACE840E1F4E01150039E555 /* Readable+Extension.swift in Sources */,
+				DACE84121F4E012A0039E555 /* Writeable+Extension.swift in Sources */,
 				DDD3985A2FFBD63D2D9686DB9843D482 /* FireRecord-dummy.m in Sources */,
+				DACE84091F4E00600039E555 /* Deletable.swift in Sources */,
 				E1399EBA5B28A884140438ADDC967810 /* FireRecord.swift in Sources */,
+				DACE84111F4E01270039E555 /* Updatable+Extension.swift in Sources */,
+				DACE84101F4E01200039E555 /* FirebaseModel+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

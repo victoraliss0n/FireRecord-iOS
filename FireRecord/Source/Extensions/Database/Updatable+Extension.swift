@@ -7,7 +7,7 @@
 
 import Foundation
 
-public extension Updatable where Self: FirebaseModel {
+extension Updatable where Self: FirebaseModel {
     func update(completion: @escaping (_ error: Error?) -> Void) {
         Self.path.updateChildValues(self.toJSON()) { (error, reference) in
             completion(error)
