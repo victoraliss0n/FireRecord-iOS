@@ -1,5 +1,5 @@
 //
-//  Uploadable.swift
+//  FirebaseStorable.swift
 //  FirebaseCommunity
 //
 //  Created by David Sanford on 15/08/17.
@@ -8,9 +8,6 @@
 import Foundation
 import FirebaseCommunity
 
-protocol Uploadable {
+protocol FirebaseStorable: Storable where Reference == StorageReference  {
     
-    var data: Data? { get }
-    
-    func upload(with name: String)
 }
