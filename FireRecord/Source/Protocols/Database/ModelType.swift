@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol ModelType: ActiveRecord, Codable {
+public protocol ModelType: ActiveRecord, Codable {
     associatedtype Reference
     static var reference: Self.Reference { get }
 }

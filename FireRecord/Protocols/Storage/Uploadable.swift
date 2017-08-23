@@ -8,7 +8,7 @@
 import Foundation
 import FirebaseCommunity
 
-protocol Uploadable {
+public protocol Uploadable {
     
     var data: Data? { get }
     
