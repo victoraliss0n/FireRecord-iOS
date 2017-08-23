@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import FirebaseCommunity
 
 protocol Uploadable {
     
