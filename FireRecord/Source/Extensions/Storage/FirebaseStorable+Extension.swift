@@ -8,7 +8,6 @@
 import Foundation
 import FirebaseCommunity
 
-
 public extension FirebaseStorable {
     public static var reference: StorageReference {
         return Storage.storage().reference()
