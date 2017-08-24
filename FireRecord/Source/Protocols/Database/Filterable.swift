@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol Filterable {
+public protocol Filterable {
     associatedtype FireRecordType
     static func findFirst(completion: @escaping (_ object: FireRecordType) -> Void)
 }

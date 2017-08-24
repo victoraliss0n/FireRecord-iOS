@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol Uploadable {
+public protocol Uploadable {
     
     var data: Data? { get }
     

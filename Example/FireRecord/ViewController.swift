@@ -14,10 +14,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         FireRecord.configure()
-        
         let file = FirebaseFile()
         file.data = UIImagePNGRepresentation(#imageLiteral(resourceName: "Image")) as? Data
-        
         file.upload(with: "my_name")
     }
 
@@ -25,5 +23,5 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 }
+

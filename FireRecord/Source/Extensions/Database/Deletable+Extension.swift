@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Deletable where Self: FirebaseModel {
+public extension Deletable where Self: FirebaseModel {
     func destroy(completion: @escaping (_ error: Error?) -> Void) {
         Self.path.removeValue { (error, reference) in
             completion(error)

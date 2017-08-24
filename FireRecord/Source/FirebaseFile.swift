@@ -7,7 +7,7 @@
 
 import Foundation
 
-open class FirebaseFile: FirebaseStorable {
+public class FirebaseFile: FirebaseStorable {
     
     public var data: Data?
     
