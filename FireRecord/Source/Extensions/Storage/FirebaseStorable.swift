@@ -8,6 +8,6 @@
 import Foundation
 import FirebaseCommunity
 
-protocol FirebaseStorable: Storable where Reference == StorageReference  {
+public protocol FirebaseStorable: Storable where Reference == StorageReference  {
     
 }

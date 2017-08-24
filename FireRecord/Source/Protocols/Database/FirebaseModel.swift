@@ -7,7 +7,6 @@
 import Foundation
 import FirebaseCommunity
 
-protocol FirebaseModel: ModelType where Reference == DatabaseReference  {
-    var key: String? { get set }
+public protocol FirebaseModel: ModelType where Reference == DatabaseReference  {
     func toJSON() -> [String: Any]
 }
