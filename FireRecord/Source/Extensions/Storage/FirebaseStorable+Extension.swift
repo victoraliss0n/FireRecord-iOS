@@ -1,24 +1,19 @@
 //
-//  FirebaseStorable.swift
+//  FirebaseStorable+Extension.swift
 //  FirebaseCommunity
 //
-//  Created by David Sanford on 15/08/17.
+//  Created by David Sanford on 23/08/17.
 //
 
 import Foundation
 import FirebaseCommunity
 
-public protocol FirebaseStorable: Storable where Reference == StorageReference  {
-    
-}
 
 public extension FirebaseStorable {
     public static var reference: StorageReference {
         return Storage.storage().reference()
     }
-}
-
-public extension FirebaseStorable {
+    
     public func upload(with name: String) {
         guard let data = data else {
             return
