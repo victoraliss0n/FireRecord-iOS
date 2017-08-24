@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Filterable where Self: FirebaseModel  {
+public extension Filterable where Self: FirebaseModel  {
     static func findFirst(completion: @escaping (_ object: Self) -> Void)  {
         
     }
