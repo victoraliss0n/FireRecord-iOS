@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol Storable: Uploadable {
+public protocol Storable: Uploadable {
     associatedtype Reference
     
     static var reference: Reference { get }

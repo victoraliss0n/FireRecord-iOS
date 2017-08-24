@@ -8,7 +8,7 @@
 import Foundation
 import FirebaseCommunity
 
-extension FirebaseModel {
+public extension FirebaseModel {
     typealias JSON = [String: Any]
     
     static var path: DatabaseReference {
