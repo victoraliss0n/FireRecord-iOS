@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         let file = FirebaseFile()
         file.data = UIImagePNGRepresentation(#imageLiteral(resourceName: "Image")) as? Data
         
-        file.upload(with: "my_name")
+        file.upload(with: "mind_philosophy")
     }
 
     override func didReceiveMemoryWarning() {
