@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Storator where Self: FirebaseDataModel {
+extension Storator where Self: FirebaseModel {
     func uploadFiles() {
         
     }

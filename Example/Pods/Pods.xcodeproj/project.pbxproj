@@ -407,10 +407,10 @@
 		E58261359B5F5C9399D5B508E57D6EF5 /* Updatable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF36A8AF6437C12F18436EA7742C1A31 /* Updatable+Extension.swift */; };
 		E60CBF9F6A1B6BF76F0C16E3006D4909 /* filename.cc in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE1D3947F3E6FC029CAE03CD7F652F /* filename.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
 		E70BBD60299468CFA8A49618C1B2D7C2 /* NSString+FURLUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D12ADC577C4EE8FB14F33C73D043DDB /* NSString+FURLUtils.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		E7564D1F1F4F140F00B20028 /* Storator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7564D1E1F4F140F00B20028 /* Storator.swift */; };
-		E7564D211F4F158900B20028 /* FirebaseDataModel+Storator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7564D201F4F158900B20028 /* FirebaseDataModel+Storator.swift */; };
 		E78D8CD6867DBD4BA797ED8F71592E40 /* FCancelEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8F79C5614DC6A7248A9AAECD30BD2A /* FCancelEvent.m */; };
 		E790A4D7A5E7924A61E405079C90E15C /* FIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = DF960E1649D655620FBB6EE7DFBE826F /* FIndex.m */; };
+		E7E87EEE1F509F8F008E0C0C /* FirebaseModel+Storator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7564D201F4F158900B20028 /* FirebaseModel+Storator.swift */; };
+		E7E87EEF1F509F96008E0C0C /* Storator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7564D1E1F4F140F00B20028 /* Storator.swift */; };
 		E806DAEDD2C9C812B23AED98DD14B56F /* FSnapshotUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 4664857E1BD88F2C45038986357EE4D8 /* FSnapshotUtilities.m */; };
 		E8C2793C952525AFD605D92C231C16CB /* FTrackedQueryManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A1B0BE33676071B67D946C3A4F3AD86D /* FTrackedQueryManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E8C49E7E927A0E721333C9F9C2B3890C /* logging.cc in Sources */ = {isa = PBXBuildFile; fileRef = 51F0FF28780EBD149820DA14B618AFCF /* logging.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
@@ -998,7 +998,7 @@
 		E6CBE1BA04E46F96F1FF664F25CE384F /* Pods-FireRecord_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FireRecord_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E72CDF41533BA016918259FD685769D3 /* FWriteRecord.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FWriteRecord.h; path = Firebase/Database/Core/FWriteRecord.h; sourceTree = "<group>"; };
 		E7564D1E1F4F140F00B20028 /* Storator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storator.swift; sourceTree = "<group>"; };
-		E7564D201F4F158900B20028 /* FirebaseDataModel+Storator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FirebaseDataModel+Storator.swift"; sourceTree = "<group>"; };
+		E7564D201F4F158900B20028 /* FirebaseModel+Storator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FirebaseModel+Storator.swift"; sourceTree = "<group>"; };
 		E7F02007FA6BCF11A6737C676D81ECCB /* FIRStorageGetMetadataTask.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRStorageGetMetadataTask.m; path = Firebase/Storage/FIRStorageGetMetadataTask.m; sourceTree = "<group>"; };
 		EAF3AED6D95BF9993F9419896F06E82F /* FChildChangeAccumulator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FChildChangeAccumulator.h; path = Firebase/Database/Core/View/Filter/FChildChangeAccumulator.h; sourceTree = "<group>"; };
 		EB64E5A2B0EFCF8EB79DB51DAB34AB1F /* GTMSessionFetcherLogging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMSessionFetcherLogging.h; path = Source/GTMSessionFetcherLogging.h; sourceTree = "<group>"; };
@@ -1601,7 +1601,7 @@
 			isa = PBXGroup;
 			children = (
 				40A403583C7C5EB934AD1797079636EF /* FirebaseStorable+Extension.swift */,
-				E7564D201F4F158900B20028 /* FirebaseDataModel+Storator.swift */,
+				E7564D201F4F158900B20028 /* FirebaseModel+Storator.swift */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -2320,6 +2320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7E87EEE1F509F8F008E0C0C /* FirebaseModel+Storator.swift in Sources */,
 				0212A89A80F6AFF12A523A5F0F43CE3A /* ActiveRecord.swift in Sources */,
 				2DE60DAE8A5522E10969CC21F669CA43 /* Deletable+Extension.swift in Sources */,
 				2F02D53383D8D99EACC0CAEB08944962 /* Deletable.swift in Sources */,
@@ -2342,6 +2343,7 @@
 				CB489E359FDE3700BAB6AA8424769AC5 /* Uploadable.swift in Sources */,
 				56E875470BFF5AB7E0D1DE076D80ED9E /* Writeable+Extension.swift in Sources */,
 				FE00ACA530CCD741C55D66822A2E234F /* Writeable.swift in Sources */,
+				E7E87EEF1F509F96008E0C0C /* Storator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2357,7 +2359,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7564D1F1F4F140F00B20028 /* Storator.swift in Sources */,
 				D0E4D71BA4E87EA650A159AAA0CCD780 /* APLevelDB.mm in Sources */,
 				AEA8B3C819F5E4A77D2C384D04A67E18 /* FAckUserWrite.m in Sources */,
 				348C3E0CB0B0A4D2D9B506396E508E22 /* FArraySortedDictionary.m in Sources */,
@@ -2445,7 +2446,6 @@
 				D27042FC21ECA135010095D19AC39220 /* FOperationSource.m in Sources */,
 				8D82DB27A1A9AFC55424DB99981140D3 /* FOverwrite.m in Sources */,
 				B4BFDDE9536A3BAAC18F16229CC26F89 /* FParsedUrl.m in Sources */,
-				E7564D211F4F158900B20028 /* FirebaseDataModel+Storator.swift in Sources */,
 				4206CD793A668B848B14393E8F47E097 /* FPath.m in Sources */,
 				54EC7961C41A0298588F8F1B2520A154 /* FPathIndex.m in Sources */,
 				92270CE17EBE8884196A748996BA16BB /* FPendingPut.m in Sources */,
