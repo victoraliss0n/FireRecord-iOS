@@ -8,6 +8,7 @@
 
 import UIKit
 import FireRecord
+import FirebaseCommunity
 
 class ViewController: UIViewController {
 
@@ -15,8 +16,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         FireRecord.configure()
         let file = FirebaseFile()
-        file.data = UIImagePNGRepresentation(#imageLiteral(resourceName: "Image")) as? Data
-        file.upload(with: "my_name")
+        file.data = UIImagePNGRepresentation(#imageLiteral(resourceName: "Image"))
+        
+        file.upload(fileName: "a_simple_name")
     }
 
     override func didReceiveMemoryWarning() {
