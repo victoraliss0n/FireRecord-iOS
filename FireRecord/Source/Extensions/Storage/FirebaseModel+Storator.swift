@@ -40,11 +40,3 @@ public extension Storator where Self: FirebaseModel {
         OperationQueue.main.addOperations(uploadOperations, waitUntilFinished: false)
     }
 }
-
-extension OperationQueue {
-    func addOperations(_ ops: [Operation?], waitUntilFinished: Bool) {
-        let operations = ops.flatMap{$0}
-        
-        self.addOperations(operations, waitUntilFinished: waitUntilFinished)
-    }
-}
