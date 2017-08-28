@@ -9,7 +9,7 @@ import Foundation
 
 public extension Storator where Self: FirebaseModel {
     
-    func uploadFiles() {
+    func uploadFiles(completion: () -> Void) {
         let selfMirror = Mirror(reflecting: self)
         
         var uploadOperations = [Operation?]()

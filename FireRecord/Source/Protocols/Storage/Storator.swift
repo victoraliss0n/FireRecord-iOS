@@ -12,5 +12,5 @@ public protocol Storator {
     /**
          Upload all properties that should be saved in firebase storage
      */
-    func uploadFiles()
+    func uploadFiles(completion: () -> Void)
 }
