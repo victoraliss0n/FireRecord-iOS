@@ -9,7 +9,7 @@ import Foundation
 
 public extension Storator where Self: FirebaseModel {
     
-    func uploadFiles(completion: () -> Void) {
+    func uploadFiles(completion: @escaping () -> Void) {
         let selfMirror = Mirror(reflecting: self)
         
         var uploadOperations = [Operation?]()
@@ -28,6 +28,23 @@ public extension Storator where Self: FirebaseModel {
             
         }
         
-        print(uploadOperations)
+        let doneOperation = Operation()
+        doneOperation.completionBlock = completion
+        
+        for operation in uploadOperations.flatMap({$0}) {
+            doneOperation.addDependency(operation)
+        }
+        
+        uploadOperations.append(doneOperation)
+        
+        OperationQueue.main.addOperations(uploadOperations, waitUntilFinished: false)
+    }
+}
+
+extension OperationQueue {
+    func addOperations(_ ops: [Operation?], waitUntilFinished: Bool) {
+        let operations = ops.flatMap{$0}
+        
+        self.addOperations(operations, waitUntilFinished: waitUntilFinished)
     }
 }
