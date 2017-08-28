@@ -7,6 +7,6 @@
 
 import Foundation
 
-open class FirebaseImage {
+open class FirebaseImage: FirebaseStorable {
     
 }
