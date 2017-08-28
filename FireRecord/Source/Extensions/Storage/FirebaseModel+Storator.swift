@@ -7,8 +7,27 @@
 
 import Foundation
 
-extension Storator where Self: FirebaseModel {
+public extension Storator where Self: FirebaseModel {
+    
     func uploadFiles() {
+        let selfMirror = Mirror(reflecting: self)
         
+        var uploadOperations = [Operation?]()
+        
+        for (name, value) in selfMirror.children {
+            guard let name = name else { continue }
+            print("\(name): \(type(of: value)) = '\(value)'")
+            
+            
+            if let firebaseImage = value as? FirebaseImage {
+                let imgUid = NSUUID().uuidString
+                //let reference =  Self.storageReference.child("images/\(Self.className)/\(Self.autoId)/\(imgUid)")
+                
+                uploadOperations.append(firebaseImage.buildUploadOperation(fileName: name))
+            }
+            
+        }
+        
+        print(uploadOperations)
     }
 }

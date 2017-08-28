@@ -12,3 +12,4 @@ public protocol FirebaseModel: ModelType where Reference == DatabaseReference  {
     init()
     func toJSON() -> [String: Any]
 }
+

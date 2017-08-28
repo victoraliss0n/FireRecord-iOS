@@ -9,4 +9,9 @@ import Foundation
 
 open class FirebaseImage: FirebaseStorable {
     
+    public var data: Data?
+    
+    public init() {
+        
+    }
 }

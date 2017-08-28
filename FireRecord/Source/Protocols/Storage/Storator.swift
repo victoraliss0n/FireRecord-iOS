@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol Storator {
+public protocol Storator {
     
     /**
          Upload all properties that should be saved in firebase storage
