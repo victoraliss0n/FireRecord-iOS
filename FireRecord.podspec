@@ -41,5 +41,6 @@ s.source_files = 'FireRecord/Source/**/*'
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'FirebaseCommunity/Database'
   s.dependency 'FirebaseCommunity/Storage'
+  s.dependency 'HandyJSON'
 
 end
