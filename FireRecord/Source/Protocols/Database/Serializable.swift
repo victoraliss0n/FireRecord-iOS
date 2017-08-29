@@ -4,5 +4,7 @@
 //
 //  Created by Victor Alisson on 29/08/17.
 //
+import HandyJSON
 
-import Foundation
+public protocol Serializable: HandyJSON {}
+public protocol SerializableEnum: HandyJSONEnum {}
