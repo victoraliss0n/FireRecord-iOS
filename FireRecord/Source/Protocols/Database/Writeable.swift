@@ -7,6 +7,6 @@
 
 import Foundation
 
-public protocol Writeable {
+public protocol Writeable: class {
     func save(completion: @escaping (_ error: Error?) -> Void)
 }
