@@ -11,7 +11,8 @@ public extension Writeable where Self: FirebaseModel {
     func save(completion: @escaping (_ error: Error?) -> Void) {
         let autoId = Self.autoId
         key = autoId
-        Self.classPath.child(autoId).setValue(toJSON()) { (error, reference) in
+        guard let json = toJSONObject() else {return}
+        Self.classPath.child(autoId).setValue(json) { (error, reference) in
             completion(error)
         }
     }
