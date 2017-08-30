@@ -14,5 +14,5 @@ public protocol FirebaseModel: ModelType where Reference == DatabaseReference  {
     static var fireRecordQuery: DatabaseQuery? {get set}
     
     init()
-    func toJSON() -> [String: Any]
+    func toJSONObject() -> [String: Any]?
 }

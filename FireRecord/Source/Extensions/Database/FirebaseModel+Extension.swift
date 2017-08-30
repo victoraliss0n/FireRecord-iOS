@@ -23,7 +23,7 @@ public extension FirebaseModel {
     internal static var autoId: String {
         return Self.reference.childByAutoId().key
     }
-    func toJSON() -> JSON {
+    func toJSONObject() -> JSON? {
         return toJSON()
     }
 }
