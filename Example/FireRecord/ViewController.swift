@@ -19,6 +19,9 @@ class ViewController: UIViewController {
         user.save { error in
             print(error ?? "=)")
         }
+        user.destroy { error in
+            print(error ?? "=)")
+        }
         
         User.findFirst { user in
             print(user.name ?? "Does not contain name")
