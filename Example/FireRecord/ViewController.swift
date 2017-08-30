@@ -14,21 +14,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let user = User()
-        user.name = "Correia"
+        user.name = "Sanford"
         
-        user.save { error in
-            print(error ?? "=)")
-        }
-        user.destroy { error in
-            print(error ?? "=)")
-        }
+        user.save { error in print(error ?? "=)")}
+        user.destroy { error in print(error ?? "=)")}
         
         User.findFirst { user in
             print(user.name ?? "Does not contain name")
-            user.name = "Alisson"
             user.update(completion: { error in
                 print(error ?? "=)")
             })
+        }
+        User.findLast { user in
+            print(user.name ?? "Does not contain name")
         }
         
         User.all { users in
