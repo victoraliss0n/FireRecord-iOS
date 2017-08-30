@@ -13,15 +13,27 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        FireRecord.configure()
-        let file = FirebaseFile()
-        file.data = UIImagePNGRepresentation(#imageLiteral(resourceName: "Image")) as? Data
-        file.upload(with: "my_name")
+        
+        let user = User()
+        user.name = "Alisson"
+        
+        user.save { error in
+            print(error ?? "=)")
+        }
+        
+        User.all { users in
+            let names = users.flatMap({$0.name})
+            names.forEach({print($0)})
+        }
+//        let file = FirebaseFile()
+//        file.data = UIImagePNGRepresentation(#imageLiteral(resourceName: "Image")) as? Data
+//        file.upload(with: "my_name")
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+}
+class User: FireRecord {
+    var name: String?
+    
+    init(name: String) { self.name = name }
+    required init() {}
 }
 
