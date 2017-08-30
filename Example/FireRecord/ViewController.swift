@@ -13,27 +13,32 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         let user = User()
-        user.name = "Alisson"
+        user.name = "Correia"
         
         user.save { error in
             print(error ?? "=)")
+        }
+        
+        User.findFirst { user in
+            print(user.name ?? "Does not contain name")
+            user.name = "Alisson"
+            user.update(completion: { error in
+                print(error ?? "=)")
+            })
         }
         
         User.all { users in
             let names = users.flatMap({$0.name})
             names.forEach({print($0)})
         }
-//        let file = FirebaseFile()
-//        file.data = UIImagePNGRepresentation(#imageLiteral(resourceName: "Image")) as? Data
-//        file.upload(with: "my_name")
     }
 }
 class User: FireRecord {
-    var name: String?
-    
+    public var name: String?
     init(name: String) { self.name = name }
-    required init() {}
+    required public init() {}
 }
+
+
 
