@@ -4,7 +4,7 @@ import HandyJSON
 open class FireRecord: FirebaseModel {
     public var key: String?
     public static var fireRecordReference: DatabaseReference?
-    static var fireRecordQuery: DatabaseQuery?
+    public static var fireRecordQuery: DatabaseQuery?
 
     required public init() {}
     
@@ -14,6 +14,5 @@ open class FireRecord: FirebaseModel {
         mapper >>> FireRecord.fireRecordQuery
     }
 }
-
 
 
