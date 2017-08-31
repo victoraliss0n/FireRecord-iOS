@@ -12,15 +12,10 @@ public extension Readable where Self: FirebaseModel {
     static func all(completion: @escaping (_ object: [Self]
         ) -> Void)  {
         Self.classPath.observe(.value) { snapshot in
-            let dataSnapshot = snapshot.children.allObjects as? [DataSnapshot]
-            let arraySelf = dataSnapshot?.flatMap({Self.deserialize(from: $0.value as? NSDictionary)})
+            let arraySelf = Self.getFirebaseModels(snapshot)
             if let objects = arraySelf {
                 completion(objects)
             }
         }
     }
-    static func limit(value: Int8) -> Self.Type {
-        return self
-    }
-
 }
