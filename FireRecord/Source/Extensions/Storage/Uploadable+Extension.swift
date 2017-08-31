@@ -7,8 +7,3 @@
 
 import Foundation
 
-public extension Uploadable {
-    func upload(fileName: String) {
-        self.buildUploadOperation(fileName: fileName)?.start()
-    }
-}

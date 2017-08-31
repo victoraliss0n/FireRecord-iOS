@@ -11,6 +11,5 @@ public protocol Uploadable {
     
     var data: Data? { get }
     
-    func buildUploadOperation(fileName: String) -> Operation?
     func upload(fileName: String)
 }

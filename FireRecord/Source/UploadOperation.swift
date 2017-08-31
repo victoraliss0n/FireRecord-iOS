@@ -8,17 +8,16 @@
 import Foundation
 import FirebaseCommunity
 
-class UploadOperation: Operation {
+public class UploadOperation {
     let data: Data
     let fileName: String
     
     init(data: Data, name: String) {
         self.data = data
         self.fileName = name
-        super.init()
     }
-    
-    override func main() {
+ 
+    func execute() {
         let uploadTask = Storage.storage().reference().child("images/\(fileName)").putData(data, metadata: StorageMetadata()) { (metadata, error) in
             
             if let error = error{

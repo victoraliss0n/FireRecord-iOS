@@ -12,7 +12,7 @@ public extension Storator where Self: FirebaseModel {
     func uploadFiles(completion: @escaping () -> Void) {
         let selfMirror = Mirror(reflecting: self)
         
-        var uploadOperations = [Operation?]()
+        var possibleUploads = [UploadOperation?]()
         
         for (name, value) in selfMirror.children {
             guard let name = name else { continue }
@@ -22,21 +22,13 @@ public extension Storator where Self: FirebaseModel {
             if let firebaseImage = value as? FirebaseImage {
                 let imgUid = NSUUID().uuidString
                 //let reference =  Self.storageReference.child("images/\(Self.className)/\(Self.autoId)/\(imgUid)")
-                
-                uploadOperations.append(firebaseImage.buildUploadOperation(fileName: name))
+                possibleUploads.append(firebaseImage.buildUploadOperation(fileName: name))
             }
-            
         }
         
-        let doneOperation = Operation()
-        doneOperation.completionBlock = completion
+        let uploads = possibleUploads.flatMap { $0 }
         
-        for operation in uploadOperations.flatMap({$0}) {
-            doneOperation.addDependency(operation)
-        }
-        
-        uploadOperations.append(doneOperation)
-        
-        OperationQueue.main.addOperations(uploadOperations, waitUntilFinished: false)
+        let operationQueue = UploadOperationQueue(operations: uploads)
+        operationQueue.startUploads()
     }
 }

@@ -421,6 +421,8 @@
 		E78D8CD6867DBD4BA797ED8F71592E40 /* FCancelEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8F79C5614DC6A7248A9AAECD30BD2A /* FCancelEvent.m */; };
 		E790A4D7A5E7924A61E405079C90E15C /* FIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = DF960E1649D655620FBB6EE7DFBE826F /* FIndex.m */; };
 		E79FFCA7B0F4198AAFB01C8A61BA7B1D /* Updatable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6281441459617F86CCFB9A491C025E8E /* Updatable+Extension.swift */; };
+		E7CF23371F5729EE005FCE5F /* UploadOperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CF23351F57299D005FCE5F /* UploadOperationQueue.swift */; };
+		E7EFE0651F55B35D0042E3A1 /* AssyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EFE0631F54EBF30042E3A1 /* AssyncOperation.swift */; };
 		E806DAEDD2C9C812B23AED98DD14B56F /* FSnapshotUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 4664857E1BD88F2C45038986357EE4D8 /* FSnapshotUtilities.m */; };
 		E8C2793C952525AFD605D92C231C16CB /* FTrackedQueryManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A1B0BE33676071B67D946C3A4F3AD86D /* FTrackedQueryManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E8C49E7E927A0E721333C9F9C2B3890C /* logging.cc in Sources */ = {isa = PBXBuildFile; fileRef = 51F0FF28780EBD149820DA14B618AFCF /* logging.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
@@ -1006,6 +1008,8 @@
 		E6CBE1BA04E46F96F1FF664F25CE384F /* Pods-FireRecord_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FireRecord_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E7278A9E1F545C25001E16BF /* OperationQueue+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OperationQueue+Extension.swift"; sourceTree = "<group>"; };
 		E72CDF41533BA016918259FD685769D3 /* FWriteRecord.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FWriteRecord.h; path = Firebase/Database/Core/FWriteRecord.h; sourceTree = "<group>"; };
+		E7CF23351F57299D005FCE5F /* UploadOperationQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadOperationQueue.swift; sourceTree = "<group>"; };
+		E7EFE0631F54EBF30042E3A1 /* AssyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssyncOperation.swift; sourceTree = "<group>"; };
 		E7F02007FA6BCF11A6737C676D81ECCB /* FIRStorageGetMetadataTask.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRStorageGetMetadataTask.m; path = Firebase/Storage/FIRStorageGetMetadataTask.m; sourceTree = "<group>"; };
 		EA6B9A0B406F4C04E3103E0876831797 /* Uploadable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Uploadable.swift; sourceTree = "<group>"; };
 		EAF3AED6D95BF9993F9419896F06E82F /* FChildChangeAccumulator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FChildChangeAccumulator.h; path = Firebase/Database/Core/View/Filter/FChildChangeAccumulator.h; sourceTree = "<group>"; };
@@ -1136,6 +1140,8 @@
 				CBC32C528DB149E427D3EBAD90C956BF /* UploadOperation.swift */,
 				9C1A14DF23CD333FFE6E3783912E3C2E /* Extensions */,
 				3A3CC943C3438A1F0CCF6AD36135724A /* Protocols */,
+				E7EFE0631F54EBF30042E3A1 /* AssyncOperation.swift */,
+				E7CF23351F57299D005FCE5F /* UploadOperationQueue.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -2568,10 +2574,12 @@
 				092D5F0ED5A1BEAEA1DD86D152779342 /* ModelType.swift in Sources */,
 				08F41E9330CB6C8AE7866C5B6E9E9EAC /* Readable+Extension.swift in Sources */,
 				AA479044F3169ED5244B6B5AE4EB9D38 /* Readable.swift in Sources */,
+				E7CF23371F5729EE005FCE5F /* UploadOperationQueue.swift in Sources */,
 				1036155E990269CBE1F9B0D9ED879AF8 /* Storable.swift in Sources */,
 				9140AFB34BE365C4BC34FACCF02828E3 /* Storator.swift in Sources */,
 				E79FFCA7B0F4198AAFB01C8A61BA7B1D /* Updatable+Extension.swift in Sources */,
 				8F3EDB8D8D92C84779805F725D69ED9C /* Updatable.swift in Sources */,
+				E7EFE0651F55B35D0042E3A1 /* AssyncOperation.swift in Sources */,
 				49DE208E73758C32DD333825EEAC9D21 /* Uploadable+Extension.swift in Sources */,
 				22A3B1A20FD9AD8C853770D8C916B178 /* Uploadable.swift in Sources */,
 				4A76649FBDEE152E48BBA2BACCF0812B /* UploadOperation.swift in Sources */,
