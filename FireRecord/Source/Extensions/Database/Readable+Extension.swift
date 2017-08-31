@@ -12,9 +12,8 @@ public extension Readable where Self: FirebaseModel {
     static func all(completion: @escaping (_ object: [Self]
         ) -> Void)  {
         Self.classPath.observe(.value) { snapshot in
-            let arraySelf = Self.getFirebaseModels(snapshot)
-            if let objects = arraySelf {
-                completion(objects)
+            if let firebaseModels = Self.getFirebaseModels(snapshot) {
+                completion(firebaseModels)
             }
         }
     }
