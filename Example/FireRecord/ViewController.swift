@@ -14,21 +14,27 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let user = User()
-        user.name = "Sanford"
+        user.name = "Victor"
         
         user.save { error in print(error ?? "=)")}
         user.destroy { error in print(error ?? "=)")}
-        
+
         User.findFirst { user in
-            print(user.name ?? "Does not contain name")
+            user.name = "Alisson"
             user.update(completion: { error in
                 print(error ?? "=)")
             })
         }
+        User.findFirst(3) { users in
+            users.forEach({print($0.name ?? "Does not contain name")})
+        }
+//
+        User.findLast(3) { users in
+            users.forEach({print($0.name ?? "Does not contain name")})
+        }
         User.findLast { user in
             print(user.name ?? "Does not contain name")
         }
-        
         User.all { users in
             let names = users.flatMap({$0.name})
             names.forEach({print($0)})
