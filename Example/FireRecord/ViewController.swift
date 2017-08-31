@@ -13,15 +13,39 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        FireRecord.configure()
-        let file = FirebaseFile()
-        file.data = UIImagePNGRepresentation(#imageLiteral(resourceName: "Image")) as? Data
-        file.upload(with: "my_name")
-    }
+        let user = User()
+        user.name = "Victor"
+        
+        user.save { error in print(error ?? "=)")}
+        user.destroy { error in print(error ?? "=)")}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        User.findFirst { user in
+            user.name = "Alisson"
+            user.update(completion: { error in
+                print(error ?? "=)")
+            })
+        }
+        User.findFirst(3) { users in
+            users.forEach({print($0.name ?? "Does not contain name")})
+        }
+//
+        User.findLast(3) { users in
+            users.forEach({print($0.name ?? "Does not contain name")})
+        }
+        User.findLast { user in
+            print(user.name ?? "Does not contain name")
+        }
+        User.all { users in
+            let names = users.flatMap({$0.name})
+            names.forEach({print($0)})
+        }
     }
 }
+class User: FireRecord {
+    public var name: String?
+    init(name: String) { self.name = name }
+    required public init() {}
+}
+
+
 
