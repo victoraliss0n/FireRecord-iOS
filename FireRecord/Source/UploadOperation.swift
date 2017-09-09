@@ -11,15 +11,17 @@ import FirebaseCommunity
 public class UploadOperation {
     let data: Data
     let fileName: String
+    let reference: StorageReference
     var completion: (() -> Void)?
     
-    init(data: Data, name: String) {
+    init(data: Data, name: String, reference: StorageReference) {
         self.data = data
         self.fileName = name
+        self.reference = reference
     }
  
     func execute() {
-        let uploadTask = Storage.storage().reference().child("images/\(fileName)").putData(data, metadata: StorageMetadata()) { (metadata, error) in
+        let uploadTask = reference.putData(data, metadata: StorageMetadata()) { (metadata, error) in
             
             if let error = error{
                 print(error.localizedDescription as Any)

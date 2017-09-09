@@ -13,7 +13,8 @@ extension Uploadable where Self: FirebaseStorable {
             return nil
         }
         
-        return UploadOperation(data: data, name: fileName)
+        let reference =  Self.reference.child(path)
+        return UploadOperation(data: data, name: fileName, reference: reference)
     }
     
     public func upload(fileName: String, path: String) {
