@@ -29,7 +29,7 @@ class UploadOperationQueue {
         }
         
         let currentOperation = operations[currentOperationIndex]
-        currentOperation.completion = {
+        currentOperation.completion = { result in
             self.currentOperationIndex += 1
             self.nextUpload()
         }
