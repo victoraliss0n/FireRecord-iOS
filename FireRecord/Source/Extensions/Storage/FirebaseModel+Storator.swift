@@ -9,7 +9,7 @@ import Foundation
 
 public extension Storator where Self: FirebaseModel {
     
-    func uploadFiles(completion: @escaping () -> Void) {
+    func uploadFiles(completion: @escaping ([NameAndUrl?]) -> Void) {
         let selfMirror = Mirror(reflecting: self)
         
         var possibleUploads = [UploadOperation?]()
@@ -30,6 +30,8 @@ public extension Storator where Self: FirebaseModel {
         let uploads = possibleUploads.flatMap { $0 }
         
         let operationQueue = UploadOperationQueue(operations: uploads)
-        operationQueue.startUploads { completion() }
+        operationQueue.startUploads { results in
+            completion(results)
+        }
     }
 }

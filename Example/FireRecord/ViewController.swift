@@ -44,8 +44,11 @@ class ViewController: UIViewController {
         
         let pedim = Pedim(photo: UIImagePNGRepresentation(#imageLiteral(resourceName: "Image"))!, photo2: UIImagePNGRepresentation(#imageLiteral(resourceName: "Image"))!)
         
-        pedim.uploadFiles {
-            print("pickle rickkkkk")
+        pedim.uploadFiles { results in
+            
+            for result in results {
+                print("pickle rickkkkk --> \(String(describing: result?.name))-\(String(describing: result?.url)) ")
+            }
         }
     }
 

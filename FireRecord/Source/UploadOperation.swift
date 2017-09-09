@@ -8,7 +8,7 @@
 import Foundation
 import FirebaseCommunity
 
-typealias NameAndUrl = (name: String, url: String)
+public typealias NameAndUrl = (name: String, url: String)
 
 public class UploadOperation {
     let data: Data
