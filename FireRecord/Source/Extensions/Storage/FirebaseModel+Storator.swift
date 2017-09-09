@@ -29,6 +29,6 @@ public extension Storator where Self: FirebaseModel {
         let uploads = possibleUploads.flatMap { $0 }
         
         let operationQueue = UploadOperationQueue(operations: uploads)
-        operationQueue.startUploads { print("uploadsDone") }
+        operationQueue.startUploads { completion() }
     }
 }
