@@ -22,7 +22,7 @@ public extension Storator where Self: FirebaseModel {
             if let firebaseImage = value as? FirebaseImage {
                 let imgUid = NSUUID().uuidString
                 //let reference =  Self.storageReference.child("images/\(Self.className)/\(Self.autoId)/\(imgUid)")
-                possibleUploads.append(firebaseImage.buildUploadOperation(fileName: name))
+                possibleUploads.append(firebaseImage.buildUploadOperation(fileName: name, path: "/images/name"))
             }
         }
         

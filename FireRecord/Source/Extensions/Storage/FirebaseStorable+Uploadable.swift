@@ -8,7 +8,7 @@
 import Foundation
 
 extension Uploadable where Self: FirebaseStorable {
-    public func buildUploadOperation(fileName: String) -> UploadOperation? {
+    public func buildUploadOperation(fileName: String, path: String) -> UploadOperation? {
         guard let data = data else {
             return nil
         }
@@ -16,7 +16,7 @@ extension Uploadable where Self: FirebaseStorable {
         return UploadOperation(data: data, name: fileName)
     }
     
-    public func upload(fileName: String) {
-        buildUploadOperation(fileName: fileName)?.execute()
+    public func upload(fileName: String, path: String) {
+        buildUploadOperation(fileName: fileName, path: path)?.execute()
     }
 }
