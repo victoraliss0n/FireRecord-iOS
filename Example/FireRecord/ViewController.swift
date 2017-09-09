@@ -47,8 +47,6 @@ class ViewController: UIViewController {
         pedim.uploadFiles {
             print("pickle rickkkkk")
         }
-        
-        
     }
 
     override func didReceiveMemoryWarning() {

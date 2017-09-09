@@ -11,6 +11,7 @@ import FirebaseCommunity
 public class UploadOperation {
     let data: Data
     let fileName: String
+    var completion: (() -> Void)?
     
     init(data: Data, name: String) {
         self.data = data
@@ -25,14 +26,17 @@ public class UploadOperation {
             }
             else {
                 guard let urlStorage = metadata?.downloadURL()!.absoluteString else {
+                    self.completion?()
                     fatalError("couldn't generate the storage url")
                 }
                 let result = (name: self.fileName, path: urlStorage)
                 print("uploaded")
+                self.completion?()
                 //TODO: return the result
             }
             if let error = error {
                 print("error")
+                self.completion?()
                 //TODO: Return an error
             }
         }
