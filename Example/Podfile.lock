@@ -12,26 +12,38 @@ PODS:
   - FireRecord (0.1.1):
     - FirebaseCommunity/Database
     - FirebaseCommunity/Storage
+    - HandyJSON
   - GoogleToolboxForMac/Defines (2.1.1)
   - GoogleToolboxForMac/NSData+zlib (2.1.1):
     - GoogleToolboxForMac/Defines (= 2.1.1)
   - GTMSessionFetcher/Core (1.1.10)
+  - HandyJSON (1.7.2)
   - leveldb-library (1.18.3)
 
 DEPENDENCIES:
   - FireRecord (from `../`)
+  - HandyJSON (from `https://github.com/alibaba/HandyJSON`, branch `dev_for_swift4.0`)
 
 EXTERNAL SOURCES:
   FireRecord:
     :path: "../"
+  HandyJSON:
+    :branch: dev_for_swift4.0
+    :git: https://github.com/alibaba/HandyJSON
+
+CHECKOUT OPTIONS:
+  HandyJSON:
+    :commit: 60aea100f5a5d4d2f76877c1403d6ecac9733d4a
+    :git: https://github.com/alibaba/HandyJSON
 
 SPEC CHECKSUMS:
   FirebaseCommunity: 3180af8da9e96e4e0114999eeebd8896c43e848f
-  FireRecord: c6caa82d7a82fac6c6960b25002bb58642fe148d
+  FireRecord: 313f1afeebd31309360f2268190e5c55d58235a1
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMSessionFetcher: 30d874b96d0d76028f61fbd122801e3f030d47db
+  HandyJSON: a881311ac1fd21aec4d6ac7484baa7a99cdd91ac
   leveldb-library: 10fb39c39e243db4af1828441162405bbcec1404
 
-PODFILE CHECKSUM: 40b56b7472087d7f6b3970d38cc75fcca36753d7
+PODFILE CHECKSUM: d798e1f83ce205a4e9fb2049fdc0062122c0289b
 
 COCOAPODS: 1.2.1

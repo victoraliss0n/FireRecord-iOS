@@ -10,50 +10,46 @@ import UIKit
 import FireRecord
 import FirebaseCommunity
 
-class Pedim: FireRecord {
-    let photo: FirebaseImage
-    let anotherPhoto: FirebaseImage
-    
-    init(photo: Data, photo2: Data) {
-        self.photo = FirebaseImage()
-        self.photo.data = photo
-        
-        self.anotherPhoto = FirebaseImage()
-        self.anotherPhoto.data = photo2
-        super.init()
-    }
-    
-    required init(from decoder: Decoder) throws {
-        fatalError("init(from:) has not been implemented")
-    }
-    
-    required init() {
-        fatalError("init() has not been implemented")
-    }
-}
-
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        FireRecord.configure()
-        let file = FirebaseImage()
-        file.data = UIImagePNGRepresentation(#imageLiteral(resourceName: "Image"))
+        let user = User()
+        user.name = "Victor"
         
-        //file.upload(fileName: "a_simple_name")
-        
-        let pedim = Pedim(photo: UIImagePNGRepresentation(#imageLiteral(resourceName: "Image"))!, photo2: UIImagePNGRepresentation(#imageLiteral(resourceName: "Image"))!)
-        
-        pedim.uploadFiles { results in
-            
-            for result in results {
-                print("pickle rickkkkk --> \(String(describing: result?.name))-\(String(describing: result?.url)) ")
-            }
+        user.save { error in print(error ?? "=)")}
+        user.destroy { error in print(error ?? "=)")}
+
+        User.findFirst { user in
+            user.name = "Alisson"
+            user.update(completion: { error in
+                print(error ?? "=)")
+            })
+        }
+        User.findFirst(3) { users in
+            users.forEach({print($0.name ?? "Does not contain name")})
+        }
+        //
+        User.findLast(3) { users in
+            users.forEach({print($0.name ?? "Does not contain name")})
+        }
+        User.findLast { user in
+            print(user.name ?? "Does not contain name")
+        }
+        User.all { users in
+            let names = users.flatMap({$0.name})
+            names.forEach({print($0)})
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 }
+class User: FireRecord {
+    
+    public var name: String?
+    var photo: FirebaseImage?
+    var anotherPhoto: FirebaseImage?
+    
+    init(name: String) { self.name = name }
+    required public init() {}
+}
+
+

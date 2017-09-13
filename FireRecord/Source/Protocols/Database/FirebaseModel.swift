@@ -9,7 +9,11 @@ import FirebaseCommunity
 
 public protocol FirebaseModel: ModelType where Reference == DatabaseReference  {
     var key: String? { get set }
+    
+    static var fireRecordReference: DatabaseReference? {get set}
+    static var fireRecordQuery: DatabaseQuery? {get set}
+    
     init()
-    func toJSON() -> [String: Any]
+    func toJSONObject() -> [String: Any]?
 }
 

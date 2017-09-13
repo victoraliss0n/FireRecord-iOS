@@ -7,6 +7,6 @@
 
 import Foundation
 
-public protocol Updatable {
+public protocol Updatable: class {
     func update(completion: @escaping (_ error: Error?) -> Void)
 }
