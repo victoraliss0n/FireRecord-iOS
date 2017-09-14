@@ -33,7 +33,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   HandyJSON:
-    :commit: 03d33004d0732a0e333d6f23dae8286011ddbe72
+    :commit: 60aea100f5a5d4d2f76877c1403d6ecac9733d4a
     :git: https://github.com/alibaba/HandyJSON
 
 SPEC CHECKSUMS:

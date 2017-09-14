@@ -11,5 +11,5 @@ public protocol Uploadable {
     
     var data: Data? { get }
     
-    func upload(with name: String)
+    func upload(fileName: String, path: String)
 }

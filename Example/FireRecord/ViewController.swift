@@ -8,9 +8,10 @@
 
 import UIKit
 import FireRecord
+import FirebaseCommunity
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let user = User()
@@ -28,7 +29,7 @@ class ViewController: UIViewController {
         User.findFirst(3) { users in
             users.forEach({print($0.name ?? "Does not contain name")})
         }
-//
+        //
         User.findLast(3) { users in
             users.forEach({print($0.name ?? "Does not contain name")})
         }
@@ -42,10 +43,13 @@ class ViewController: UIViewController {
     }
 }
 class User: FireRecord {
+    
     public var name: String?
+    var photo: FirebaseImage?
+    var anotherPhoto: FirebaseImage?
+    
     init(name: String) { self.name = name }
     required public init() {}
 }
-
 
 

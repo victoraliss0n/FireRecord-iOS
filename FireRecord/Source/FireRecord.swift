@@ -2,6 +2,7 @@ import FirebaseCommunity
 import HandyJSON
 
 open class FireRecord: FirebaseModel {
+    
     public var key: String?
     public static var fireRecordReference: DatabaseReference?
     public static var fireRecordQuery: DatabaseQuery?
