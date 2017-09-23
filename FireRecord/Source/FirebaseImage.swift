@@ -17,4 +17,8 @@ open class FirebaseImage: FirebaseStorable {
     public init(_ image: UIImage) {
         self.data = UIImagePNGRepresentation(image)
     }
+    
+    public func mapping(mapper: HelpingMapper) {
+        mapper >>> data
+    }
 }
