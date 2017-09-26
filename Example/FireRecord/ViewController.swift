@@ -23,17 +23,17 @@ class ViewController: UIViewController {
 //
 //        user.save { error in print(error ?? errorMessage)}
 //        user.destroy { error in print(error ?? errorMessage)}
-
+//
 //        User.findFirst { user in
 //            user.name = "Alisson"
 //            user.update(completion: { error in
-//                print(error ?? "=)")
+//                print(error ?? errorMessage)
 //            })
 //        }
 //        User.findFirst(3) { users in
-//            users.forEach({print($0.name ?? "Does not contain name")})
+//            users.forEach({print($0.name ?? errorMessage)})
 //        }
-//        //
+//
 //        User.findLast(3) { users in
 //            users.forEach({print($0.name ?? "Does not contain name")})
 //        }
@@ -44,13 +44,34 @@ class ViewController: UIViewController {
 //            let names = users.flatMap({$0.name})
 //            names.forEach({print($0)})
 //        }
-        
-        User.order(byProperty: "name").where(value: "Alisson").find { users in
-            users.forEach {print($0.name ?? "Property not present")}
-        }
-        Professional.order(byProperty: "phone").where(value: "98984933").find { professionals in
-            professionals.forEach {print($0.phone ?? "Property not present")}
-        }
+//
+//        User.order(byProperty: "name").where(value: "Alisson").find { users in
+//            users.forEach {print($0.name ?? "Property not present")}
+//        }
+//        Professional.order(byProperty: "phone").where(value: "98984933").find { professionals in
+//            professionals.forEach {print($0.phone ?? "Property not present")}
+//        }
+//        User.order(byProperty: "name").findLast { user in
+//            print(user.name ?? "Property not present")
+//        }
+//        User.order(byProperty: "name").findLast(3) { users in
+//            print(users.count)
+//        }
+//        User.order(byProperty: "name").findFirst { user in
+//            print(user.name ?? "Property not present")
+//        }
+//        User.order(byProperty: "name").findFirst(3) { users in
+//            print(users.count)
+//        }
+//        User.orderByValue().findFirst(1) { users in
+//            print(users.count)
+//        }
+//        User.order(byProperty: "name")
+//            .start(atValue: "Alisson")
+//            .end(atValue: "Victor")
+//            .find { users in
+//            print(users.count)
+//        }
     }
 }
 class User: FireRecord {
