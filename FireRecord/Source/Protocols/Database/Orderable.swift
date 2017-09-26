@@ -10,4 +10,5 @@ import Foundation
 public protocol Orderable {
     associatedtype FireRecordType
     static func order(byProperty property: String) -> FireRecordType.Type
+    static func orderByValue() -> FireRecordType.Type
 }

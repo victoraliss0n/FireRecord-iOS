@@ -12,4 +12,8 @@ extension Orderable where Self: FirebaseModel {
         Self.fireRecordQuery = Self.classPath.queryOrdered(byChild: property)
         return self
     }
+    public static func orderByValue() -> Self.Type {
+        Self.fireRecordQuery = Self.classPath.queryOrderedByValue()
+        return self
+    }
 }
