@@ -9,7 +9,7 @@ import FirebaseCommunity
 
 extension Orderable where Self: FirebaseModel {
     public static func order(byProperty property: String) -> Self.Type {
-        Self.fireRecordReference = Self.classPath.queryOrdered(byChild: property) as? DatabaseReference
+        Self.fireRecordQuery = Self.classPath.queryOrdered(byChild: property) as? DatabaseQuery
         return self
     }
 }
