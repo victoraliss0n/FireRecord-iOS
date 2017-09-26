@@ -10,4 +10,5 @@ import FirebaseCommunity
 
 public protocol FirebaseStorable: Storable where Reference == StorageReference  {
     
+    var path: String? { get set }
 }
