@@ -7,7 +7,7 @@
 
 import Foundation
 
-public protocol Ordinable {
+public protocol Orderable {
     associatedtype FireRecordType
     static func order(byProperty property: String) -> FireRecordType.Type
 }
