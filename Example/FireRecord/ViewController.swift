@@ -9,6 +9,7 @@
 import UIKit
 import FireRecord
 import FirebaseCommunity
+import HandyJSON
 
 class ViewController: UIViewController {
     
@@ -16,6 +17,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         let user = User()
         user.name = "Victor"
+        user.photo = FirebaseImage(#imageLiteral(resourceName: "Image"))
         
 //        let errorMessage = "Does not contain error"
 //
@@ -55,7 +57,6 @@ class User: FireRecord {
     
     var name: String?
     var photo: FirebaseImage?
-    var anotherPhoto: FirebaseImage?
     
     init(name: String) { self.name = name }
     required public init() {}
