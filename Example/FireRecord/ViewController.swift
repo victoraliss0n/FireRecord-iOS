@@ -17,39 +17,53 @@ class ViewController: UIViewController {
         let user = User()
         user.name = "Victor"
         
-        user.save { error in print(error ?? "=)")}
-        user.destroy { error in print(error ?? "=)")}
+//        let errorMessage = "Does not contain error"
+//
+//        user.save { error in print(error ?? errorMessage)}
+//        user.destroy { error in print(error ?? errorMessage)}
 
-        User.findFirst { user in
-            user.name = "Alisson"
-            user.update(completion: { error in
-                print(error ?? "=)")
-            })
+//        User.findFirst { user in
+//            user.name = "Alisson"
+//            user.update(completion: { error in
+//                print(error ?? "=)")
+//            })
+//        }
+//        User.findFirst(3) { users in
+//            users.forEach({print($0.name ?? "Does not contain name")})
+//        }
+//        //
+//        User.findLast(3) { users in
+//            users.forEach({print($0.name ?? "Does not contain name")})
+//        }
+//        User.findLast { user in
+//            print(user.name ?? "Does not contain name")
+//        }
+//        User.all { users in
+//            let names = users.flatMap({$0.name})
+//            names.forEach({print($0)})
+//        }
+        
+        User.order(byProperty: "name").where(value: "Alisson").find { users in
+            users.forEach {print($0.name ?? "Property not present")}
         }
-        User.findFirst(3) { users in
-            users.forEach({print($0.name ?? "Does not contain name")})
-        }
-        //
-        User.findLast(3) { users in
-            users.forEach({print($0.name ?? "Does not contain name")})
-        }
-        User.findLast { user in
-            print(user.name ?? "Does not contain name")
-        }
-        User.all { users in
-            let names = users.flatMap({$0.name})
-            names.forEach({print($0)})
+        Professional.order(byProperty: "phone").where(value: "98984933").find { professionals in
+            professionals.forEach {print($0.phone ?? "Property not present")}
         }
     }
 }
 class User: FireRecord {
     
-    public var name: String?
+    var name: String?
     var photo: FirebaseImage?
     var anotherPhoto: FirebaseImage?
     
     init(name: String) { self.name = name }
     required public init() {}
+}
+
+class Professional: FireRecord {
+    var name: String?
+    var phone: String?
 }
 
 
