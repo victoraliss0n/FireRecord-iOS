@@ -28,15 +28,11 @@ public extension FirebaseModel {
     }
     internal static func getFirebaseModels(_ snapshot: DataSnapshot) -> [Self]? {
         let dataSnapshot = snapshot.children.allObjects as? [DataSnapshot]
-        let keys = dataSnapshot?.map {$0.key}
-        guard let firebaseModels = (dataSnapshot?.flatMap {Self.deserialize(from: $0.value as? NSDictionary)}) else {
-            return nil
-        }
-        
-        for (index, firebaseModel) in firebaseModels.enumerated() {
-            firebaseModel.key = keys?[index]
-        }
-        
+        let keys = dataSnapshot?.map { $0.key }
+        let firebaseModels = (dataSnapshot?
+            .flatMap{ Self.deserialize(from: $0.value as? NSDictionary) })?
+            .enumerated()
+            .flatMap { offset, element -> Self in element.key = keys?[offset]; return element }
         return firebaseModels
     }
 }
