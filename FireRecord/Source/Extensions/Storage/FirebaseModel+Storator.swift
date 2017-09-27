@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import FirebaseCommunity
+import HandyJSON
 
 public extension Storator where Self: FirebaseModel {
     
@@ -33,5 +35,26 @@ public extension Storator where Self: FirebaseModel {
         operationQueue.startUploads { results in
             completion(results)
         }
+    }
+    
+    internal mutating func deserializeStorablePaths(snapshot: DataSnapshot) {
+        let selfMirror = Mirror(reflecting: self)
+        
+        let modelDictionary = snapshot.value as? NSDictionary
+        var storables = [String: Any]()
+        
+        for (name, propertyValue) in selfMirror.children {
+            guard let name = name else { continue }
+            
+            if type(of: propertyValue) is FirebaseImage?.Type {
+                
+                let firebaseImage = FirebaseImage()
+                firebaseImage.path = modelDictionary?[name] as? String
+                
+                storables[name] = firebaseImage
+            }
+        }
+        
+        JSONDeserializer.update(object: &self, from: storables)
     }
 }
