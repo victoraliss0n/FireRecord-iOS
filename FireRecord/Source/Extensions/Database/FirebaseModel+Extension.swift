@@ -32,7 +32,7 @@ public extension FirebaseModel {
         let firebaseModels = (dataSnapshot?
             .flatMap{ Self.deserialize(from: $0.value as? NSDictionary) })?
             .enumerated()
-            .flatMap { offset, element -> Self in element.key = keys?[offset]; return element }
+            .flatMap { index, model -> Self in model.key = keys?[index]; return model }
         return firebaseModels
     }
 }
