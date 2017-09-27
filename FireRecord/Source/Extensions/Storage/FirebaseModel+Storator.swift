@@ -18,8 +18,6 @@ public extension Storator where Self: FirebaseModel {
         
         for (name, value) in selfMirror.children {
             guard let name = name else { continue }
-            print("\(name): \(type(of: value)) = '\(value)'")
-            
             
             if let firebaseImage = value as? FirebaseImage {
                 let uniqueId = NSUUID().uuidString
@@ -47,10 +45,8 @@ public extension Storator where Self: FirebaseModel {
             guard let name = name else { continue }
             
             if type(of: propertyValue) is FirebaseImage?.Type {
-                
                 let firebaseImage = FirebaseImage()
                 firebaseImage.path = modelDictionary?[name] as? String
-                
                 storables[name] = firebaseImage
             }
         }
