@@ -16,4 +16,3 @@ public protocol FirebaseModel: ModelType where Reference == DatabaseReference  {
     init()
     func toJSONObject() -> [String: Any]?
 }
-

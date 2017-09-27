@@ -10,6 +10,7 @@ import HandyJSON
 
 open class FirebaseImage: FirebaseStorable {
     
+    public var path: String?
     public var data: Data?
     
     public required init() {}
