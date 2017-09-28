@@ -4,6 +4,9 @@
 [![Version](https://img.shields.io/cocoapods/v/FireRecord.svg?style=flat)](http://cocoapods.org/pods/FireRecord)
 [![License](https://img.shields.io/cocoapods/l/FireRecord.svg?style=flat)](http://cocoapods.org/pods/FireRecord)
 [![Platform](https://img.shields.io/cocoapods/p/FireRecord.svg?style=flat)](http://cocoapods.org/pods/FireRecord)
+<a href="https://swift.org">
+        <img src="http://img.shields.io/badge/swift-4.0-brightgreen.svg" alt="Swift 4.0">
+</a>
 
 FireRecord is a framework written in swift which brings the ActiveRecord architecture as a wrapper to Firebase SDK on iOS
 
