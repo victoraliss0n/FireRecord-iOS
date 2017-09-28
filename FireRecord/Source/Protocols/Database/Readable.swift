@@ -7,9 +7,8 @@
 
 import Foundation
 
-public protocol Readable: Filterable, Orderable {
+public protocol Readable: Filterable, Orderable, Limitable {
     static func all(completion: @escaping (_ objects: [FireRecordType]) -> Void)
-    static func `where`(value: Any) -> FireRecordType.Type
     static func find(completion: @escaping (_ objects: [FireRecordType]) -> Void)
 }
 
