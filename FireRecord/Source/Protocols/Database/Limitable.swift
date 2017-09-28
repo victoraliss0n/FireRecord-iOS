@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+public protocol Limitable {
+    associatedtype FireRecordType
+    
+    static func `where`(value: Any) -> FireRecordType.Type
+}
