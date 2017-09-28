@@ -7,7 +7,7 @@
 
 import Foundation
 
-public protocol ActiveRecord: Writeable, Deletable, Readable, Updatable, Storator {
+public protocol ActiveRecord: Writeable, Deletable, Readable, ReadableInRealTime, Updatable, Storator {
 
 }
 
