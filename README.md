@@ -100,9 +100,10 @@ it, simply add the following line to your Podfile:
 pod "FireRecord"
 ```
 
-## Author
+## Authors
 
-Victor Alisson, victoralissont5@gmail.com
+* Victor Alisson, victoralissont5@gmail.com
+* David Sanford,  dsanfordseu@gmail.com
 
 ## License
 
