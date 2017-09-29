@@ -1,6 +1,5 @@
 # FireRecord
 
-[![CI Status](http://img.shields.io/travis/victoralissont5@gmail.com/FireRecord.svg?style=flat)](https://travis-ci.org/victoralissont5@gmail.com/FireRecord)
 [![Version](https://img.shields.io/cocoapods/v/FireRecord.svg?style=flat)](http://cocoapods.org/pods/FireRecord)
 [![License](https://img.shields.io/cocoapods/l/FireRecord.svg?style=flat)](http://cocoapods.org/pods/FireRecord)
 [![Platform](https://img.shields.io/cocoapods/p/FireRecord.svg?style=flat)](http://cocoapods.org/pods/FireRecord)
