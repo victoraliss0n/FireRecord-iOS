@@ -4,7 +4,6 @@ platform :ios, '11.0'
 
 target 'FireRecord_Example' do
   pod 'FireRecord', :path => '../'
-  pod 'HandyJSON', :git => 'https://github.com/alibaba/HandyJSON', :branch => 'dev_for_swift4.0'
 
 target 'FireRecord_Tests' do
     inherit! :search_paths

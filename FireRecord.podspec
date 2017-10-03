@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'FireRecord'
-s.version          = '0.1.1'
+s.version          = '0.2.0'
 s.summary          = 'Swift ActiveRecord-inspired model for Firebase.'
 
 # This description is used to generate tags and improve search results.
@@ -41,6 +41,6 @@ s.source_files = 'FireRecord/Source/**/*'
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'FirebaseCommunity/Database'
   s.dependency 'FirebaseCommunity/Storage'
-  s.dependency 'HandyJSON'
+  s.dependency "HandyJSON", ">= 4.0.0-beta.0"
 
 end

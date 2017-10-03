@@ -1,49 +1,40 @@
 PODS:
-  - FirebaseCommunity/Core (0.0.1):
+  - FirebaseCommunity/Core (0.1.3):
     - FirebaseCommunity/Root
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
-  - FirebaseCommunity/Database (0.0.1):
+  - FirebaseCommunity/Database (0.1.3):
     - FirebaseCommunity/Core
     - leveldb-library
-  - FirebaseCommunity/Root (0.0.1)
-  - FirebaseCommunity/Storage (0.0.1):
+  - FirebaseCommunity/Root (0.1.3)
+  - FirebaseCommunity/Storage (0.1.3):
     - FirebaseCommunity/Core
     - GTMSessionFetcher/Core (~> 1.1)
   - FireRecord (0.1.1):
     - FirebaseCommunity/Database
     - FirebaseCommunity/Storage
-    - HandyJSON
+    - HandyJSON (>= 4.0.0-beta.0)
   - GoogleToolboxForMac/Defines (2.1.1)
   - GoogleToolboxForMac/NSData+zlib (2.1.1):
     - GoogleToolboxForMac/Defines (= 2.1.1)
-  - GTMSessionFetcher/Core (1.1.10)
-  - HandyJSON (1.7.2)
+  - GTMSessionFetcher/Core (1.1.12)
+  - HandyJSON (4.0.0-beta.1)
   - leveldb-library (1.18.3)
 
 DEPENDENCIES:
   - FireRecord (from `../`)
-  - HandyJSON (from `https://github.com/alibaba/HandyJSON`, branch `dev_for_swift4.0`)
 
 EXTERNAL SOURCES:
   FireRecord:
     :path: "../"
-  HandyJSON:
-    :branch: dev_for_swift4.0
-    :git: https://github.com/alibaba/HandyJSON
-
-CHECKOUT OPTIONS:
-  HandyJSON:
-    :commit: 60aea100f5a5d4d2f76877c1403d6ecac9733d4a
-    :git: https://github.com/alibaba/HandyJSON
 
 SPEC CHECKSUMS:
-  FirebaseCommunity: 3180af8da9e96e4e0114999eeebd8896c43e848f
-  FireRecord: 313f1afeebd31309360f2268190e5c55d58235a1
+  FirebaseCommunity: 577bff60785dfe3fb214c8d3993477fc44286fb6
+  FireRecord: e0921bef1e3e97f7a6592d2dfd36c4401769b40a
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
-  GTMSessionFetcher: 30d874b96d0d76028f61fbd122801e3f030d47db
-  HandyJSON: a881311ac1fd21aec4d6ac7484baa7a99cdd91ac
+  GTMSessionFetcher: ebaa1f79a5366922c1735f1566901f50beba23b7
+  HandyJSON: 428bb18e2c34c2a77361accebf90cf64e4f74118
   leveldb-library: 10fb39c39e243db4af1828441162405bbcec1404
 
-PODFILE CHECKSUM: d798e1f83ce205a4e9fb2049fdc0062122c0289b
+PODFILE CHECKSUM: 40b56b7472087d7f6b3970d38cc75fcca36753d7
 
 COCOAPODS: 1.2.1
