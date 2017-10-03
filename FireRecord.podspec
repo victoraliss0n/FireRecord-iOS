@@ -41,6 +41,6 @@ s.source_files = 'FireRecord/Source/**/*'
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'FirebaseCommunity/Database'
   s.dependency 'FirebaseCommunity/Storage'
-  s.dependency 'HandyJSON'
+  s.dependency "HandyJSON", ">= 4.0.0-beta.0"
 
 end
