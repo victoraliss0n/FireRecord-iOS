@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'FireRecord'
-s.version          = '0.1.1'
+s.version          = '0.2.0'
 s.summary          = 'Swift ActiveRecord-inspired model for Firebase.'
 
 # This description is used to generate tags and improve search results.
