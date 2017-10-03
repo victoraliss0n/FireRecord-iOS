@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/cocoapods/l/FireRecord.svg?style=flat)](http://cocoapods.org/pods/FireRecord)
 [![Platform](https://img.shields.io/cocoapods/p/FireRecord.svg?style=flat)](http://cocoapods.org/pods/FireRecord)
 <a href="https://swift.org">
-        <img src="http://img.shields.io/badge/swift-4.0-brightgreen.svg" alt="Swift 4.0">
+<img src="http://img.shields.io/badge/swift-4.0-brightgreen.svg" alt="Swift 4.0">
 </a>
 
 FireRecord is a framework written in swift which brings the ActiveRecord architecture as a wrapper to Firebase SDK on iOS
@@ -15,9 +15,9 @@ FireRecord is a framework written in swift which brings the ActiveRecord archite
 
 ```swift
 class User: FireRecord {
-    var age: Int?
-    var name: String?   
-    var photo: FirebaseImage?
+var age: Int?
+var name: String?
+var photo: FirebaseImage?
 }
 ```
 
@@ -36,24 +36,24 @@ user.save { error in print(error ?? errorMessage) }
 ### Read
 ```swift
 User.all { users in
-    users.flatMap{ $0.name }.forEach{ print($0) }
+users.flatMap{ $0.name }.forEach{ print($0) }
 }
 
 User.findFirst { user in
-    print(user.name ?? "First users doesn't have name")
+print(user.name ?? "First users doesn't have name")
 }
 
 User.findLast { user in
-    print(user.name ?? "Last users doesn't have name")
+print(user.name ?? "Last users doesn't have name")
 }
 
 User.findFirst(3) { users in
-    users.forEach { user in print(user.name ?? " User doesn't have name")}
+users.forEach { user in print(user.name ?? " User doesn't have name")}
 }
 
 User.findLast(3) { users in
-    users.forEach { user in print(user.name ?? " User doesn't have name")}
-}      
+users.forEach { user in print(user.name ?? " User doesn't have name")}
+}
 ```
 
 ### Update
@@ -70,23 +70,23 @@ user.destroy { error in print(error ?? errorMessage)}
 ### Query
 ```swift
 User.order(byProperty: "name").where(value: "Alisson").find { users in
-    users.flatMap{ $0.name }.forEach{ print($0) }                          //print all names
+users.flatMap{ $0.name }.forEach{ print($0) }                          //print all names
 }
 
 Professional.order(byProperty: "phone").where(value: "98984933").find { professionals in
-    professionals.flatMap{ $0.phone }.forEach{ print($0) }                //print all phones
+professionals.flatMap{ $0.phone }.forEach{ print($0) }                //print all phones
 }
 
 User.order(byProperty: "name").findLast { user in
-    print(user.name ?? "Property not present")
+print(user.name ?? "Property not present")
 }
 
 User.order(byProperty: "name").findLast(3) { users in
-    print(users.count)
+print(users.count)
 }
 
 User.order(byProperty: "name").findFirst { user in
-    print(user.name ?? "Property not present")
+print(user.name ?? "Property not present")
 }
 ```
 
