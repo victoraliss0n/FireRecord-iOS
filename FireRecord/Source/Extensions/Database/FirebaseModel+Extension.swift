@@ -37,7 +37,12 @@ public extension FirebaseModel {
                 mutableModel.deserializeStorablePaths(snapshot: snapshots[index])
                 return mutableModel
         }
-        
         return firebaseModels
+    }
+    internal static func getFirebaseModel(from snapshot: DataSnapshot) -> Self? {
+        guard let json = snapshot.value as? NSDictionary else { return nil }
+        let firebaseModel = Self.deserialize(from: json)
+        firebaseModel?.key = snapshot.key
+        return firebaseModel
     }
 }
