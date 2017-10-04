@@ -9,10 +9,13 @@ import Foundation
 
 public extension Deletable where Self: FirebaseModel {
     func destroy(completion: @escaping (_ error: Error?) -> Void) {
-        guard let key = self.key else {
-            return
-        }
+        guard let key = self.key else { return }
         Self.classPath.child(key).removeValue { (error, reference) in
+            completion(error)
+        }
+    }
+    static func destroyAll(completion: @escaping (_ error: Error?) -> Void) {
+        Self.classPath.removeValue { (error, reference) in
             completion(error)
         }
     }
