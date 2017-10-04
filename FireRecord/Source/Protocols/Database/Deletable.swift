@@ -9,4 +9,6 @@ import Foundation
 
 public protocol Deletable: class {
      func destroy(completion: @escaping (_ error: Error?) -> Void)
+     static func destroyAll(completion: @escaping (_ error: Error?) -> Void)
+
 }

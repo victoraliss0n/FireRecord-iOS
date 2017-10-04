@@ -13,4 +13,5 @@ public protocol Orderable {
     static func orderByValue() -> FireRecordType.Type
     static func start(atValue value: Any) -> FireRecordType.Type
     static func end(atValue value: Any) -> FireRecordType.Type
+    static func orderByKey() -> FireRecordType.Type
 }

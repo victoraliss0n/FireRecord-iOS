@@ -20,9 +20,12 @@ extension Orderable where Self: FirebaseModel {
         Self.fireRecordQuery = Self.fireRecordQuery?.queryStarting(atValue: value)
         return self
     }
-    
     public static func end(atValue value: Any) -> Self.Type {
         Self.fireRecordQuery = Self.fireRecordQuery?.queryEnding(atValue: value)
+        return self
+    }
+    public static func orderByKey() -> Self.Type {
+        Self.fireRecordQuery = Self.classPath.queryOrderedByKey()
         return self
     }
 }

@@ -21,5 +21,20 @@ public extension Readable where Self: FirebaseModel {
             if let firebaseModels = Self.getFirebaseModels(snapshot) {completion(firebaseModels)}
         }
     }
+    static func find(byKey key: String, completion: @escaping (_ objects: Self) -> Void) {
+        Self.classPath.child(key).observeSingleEvent(of: .value) { snapshot in
+            if let model = Self.getFirebaseModel(from: snapshot) {
+                completion(model)
+            }
+        }
+    }
+     func findByKey(completion: @escaping (_ object: Self) -> Void) {
+        guard let key = self.key else { return }
+        Self.classPath.child(key).observeSingleEvent(of: .value) { snapshot in
+            if let model = Self.getFirebaseModel(from: snapshot) {
+                completion(model)
+            }
+        }
+    }
     
 }
