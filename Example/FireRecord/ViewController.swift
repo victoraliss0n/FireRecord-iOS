@@ -8,7 +8,6 @@
 
 import UIKit
 import FireRecord
-import FirebaseCommunity
 import HandyJSON
 
 class ViewController: UIViewController {
@@ -80,6 +79,10 @@ class ViewController: UIViewController {
             .end(atValue: "Victor")
             .observeFind { users in
                 users.forEach { print($0.name ?? "Empty Property") }
+        }
+        
+        User.order(byProperty: \User.name).findFirst { user in
+            print(user.name ?? "empty")
         }
     }
 }
