@@ -1,6 +1,7 @@
 import FirebaseCommunity
 import HandyJSON
 
+@objcMembers
 open class FireRecord: FirebaseModel {
     
     public var key: String?

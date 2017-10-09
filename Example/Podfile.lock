@@ -9,7 +9,7 @@ PODS:
   - FirebaseCommunity/Storage (0.1.3):
     - FirebaseCommunity/Core
     - GTMSessionFetcher/Core (~> 1.1)
-  - FireRecord (0.1.1):
+  - FireRecord (0.2.0):
     - FirebaseCommunity/Database
     - FirebaseCommunity/Storage
     - HandyJSON (>= 4.0.0-beta.0)
@@ -29,7 +29,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FirebaseCommunity: 577bff60785dfe3fb214c8d3993477fc44286fb6
-  FireRecord: e0921bef1e3e97f7a6592d2dfd36c4401769b40a
+  FireRecord: 61d556baf7b080134dacfa1c461621aa56e7bfcc
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMSessionFetcher: ebaa1f79a5366922c1735f1566901f50beba23b7
   HandyJSON: 428bb18e2c34c2a77361accebf90cf64e4f74118
