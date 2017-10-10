@@ -8,19 +8,22 @@
 import Foundation
 import FirebaseCommunity
 
-public extension Readable where Self: FirebaseModel {
+public extension Readable where Self: FirebaseModel  {
     
     static func all(completion: @escaping (_ object: [Self]
         ) -> Void)  {
         Self.classPath.observeSingleEvent(of: .value) { snapshot in
-            if let firebaseModels = Self.getFirebaseModels(snapshot) {completion(firebaseModels)}
+            let firebaseModels = Self.getFirebaseModels(snapshot)
+            completion(firebaseModels)
         }
     }
     static func find(completion: @escaping (_ objects: [Self]) -> Void) {
         Self.fireRecordQuery?.observeSingleEvent(of: .value) { snapshot in
-            if let firebaseModels = Self.getFirebaseModels(snapshot) {completion(firebaseModels)}
+            let firebaseModels = Self.getFirebaseModels(snapshot)
+            completion(firebaseModels)
         }
     }
+    
     static func find(byKey key: String, completion: @escaping (_ objects: Self) -> Void) {
         Self.classPath.child(key).observeSingleEvent(of: .value) { snapshot in
             if let model = Self.getFirebaseModel(from: snapshot) {

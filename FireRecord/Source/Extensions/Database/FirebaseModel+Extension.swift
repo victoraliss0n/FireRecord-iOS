@@ -26,9 +26,10 @@ public extension FirebaseModel {
     func toJSONObject() -> JSON? {
         return toJSON()
     }
-    internal static func getFirebaseModels(_ snapshot: DataSnapshot) -> [Self]? {
-        guard let snapshots = snapshot.children.allObjects as? [DataSnapshot] else { return nil }
+    internal static func getFirebaseModels(_ snapshot: DataSnapshot) -> [Self] {
+        let snapshots = snapshot.children.allObjects.flatMap {$0 as? DataSnapshot}
         let keys = snapshots.map { $0.key }
+        
         let firebaseModels = ( snapshots.flatMap{ Self.deserialize(from: $0.value as? NSDictionary) })
             .enumerated()
             .flatMap { index, model -> Self in
