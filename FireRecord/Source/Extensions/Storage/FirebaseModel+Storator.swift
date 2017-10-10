@@ -19,11 +19,12 @@ public extension Storator where Self: FirebaseModel {
         for (name, value) in selfMirror.children {
             guard let name = name else { continue }
             
-            if let firebaseImage = value as? FirebaseImage {
+            //This aditional cast to Anyobject is needed because of this swift bug: https://bugs.swift.org/browse/SR-3871
+            if let firebaseStorable = value as? AnyObject as? FirebaseStorable {
                 let uniqueId = NSUUID().uuidString
                 let storagePath = "FireRecord/\(Self.className)/\(Self.autoId)/\(name)-\(uniqueId)"
                 
-                possibleUploads.append(firebaseImage.buildUploadOperation(fileName: name, path: storagePath))
+                possibleUploads.append(firebaseStorable.buildUploadOperation(fileName: name, path: storagePath))
             }
         }
         
