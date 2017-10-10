@@ -8,7 +8,4 @@
 import Foundation
 
 public protocol Storable: Uploadable, Serializable {
-    associatedtype Reference
-    
-    static var reference: Reference { get }
 }

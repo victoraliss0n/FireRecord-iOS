@@ -8,7 +8,7 @@
 import Foundation
 import FirebaseCommunity
 
-public protocol FirebaseStorable: Storable where Reference == StorageReference  {
+public protocol FirebaseStorable: Storable  {
     
     var path: String? { get set }
 }
