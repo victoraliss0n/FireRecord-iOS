@@ -10,18 +10,22 @@ import FirebaseCommunity
 
 public extension ReadableInRealTime where Self: FirebaseModel {
     
-    static func observeAll(completion: @escaping (_ object: [Self]
-        ) -> Void)  {
-        Self.classPath.observe(.value) { snapshot in
+   @discardableResult static func observeAll(completion: @escaping (_ object: [Self]
+        ) -> Void) -> DatabaseHandle {
+        var handle: DatabaseHandle = 0
+        handle = Self.classPath.observe(.value) { snapshot in
             let firebaseModels = Self.getFirebaseModels(snapshot)
             completion(firebaseModels)
         }
+        return handle
     }
     
-    static func observeFind(completion: @escaping (_ objects: [Self]) -> Void) {
-        Self.fireRecordQuery?.observe(.value) { snapshot in
+   @discardableResult static func observeFind(completion: @escaping (_ objects: [Self]) -> Void) -> DatabaseHandle {
+        var handle: DatabaseHandle? = 0
+        handle = Self.fireRecordQuery?.observe(.value) { snapshot in
             let firebaseModels = Self.getFirebaseModels(snapshot)
             completion(firebaseModels)
         }
+        return handle ?? 0
     }
 }
