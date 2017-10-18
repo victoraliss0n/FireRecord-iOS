@@ -469,6 +469,7 @@
 		E6BCA32511DE3C9A2E7615207C7171B2 /* Pods-FireRecord_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EFA7110A461D2D8509B0555D89B3C45F /* Pods-FireRecord_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E6E9BCBBA085EB13CA49A579489A3C2A /* FTuplePathValue.m in Sources */ = {isa = PBXBuildFile; fileRef = ED584B149822B6B5D0965254F61735AF /* FTuplePathValue.m */; };
 		E73964C41F97911E00114339 /* OptionalProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73964C31F97911E00114339 /* OptionalProtocol.swift */; };
+		E73964C61F9793D200114339 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73964C51F9793D200114339 /* Optional.swift */; };
 		E7B24A928ED5CD423BAE6483852DA4C7 /* FIRBundleUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ADA15BE562EFD0FBFCEB4EEC51EB8F9 /* FIRBundleUtil.m */; };
 		E85E1D1DA6700414F5A7B07A4D8EA89C /* FIRStorageTaskSnapshot_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 4283C5E449231496E9768D9E11AE0566 /* FIRStorageTaskSnapshot_Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E86379A883CE620B6B4AB7F0123842B3 /* ExtendCustomModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07C4A7CBFF25E18389543A937D15235 /* ExtendCustomModelType.swift */; };
@@ -1104,6 +1105,7 @@
 		E65AC8E83F8E2192998C67210FAB017A /* FIRDatabaseReference_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRDatabaseReference_Private.h; path = Firebase/Database/Api/Private/FIRDatabaseReference_Private.h; sourceTree = "<group>"; };
 		E6CBE1BA04E46F96F1FF664F25CE384F /* Pods-FireRecord_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FireRecord_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E73964C31F97911E00114339 /* OptionalProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalProtocol.swift; sourceTree = "<group>"; };
+		E73964C51F9793D200114339 /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		E7520444EBFA041E75B56A94BFFF8338 /* FPruneForest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FPruneForest.h; path = Firebase/Database/Persistence/FPruneForest.h; sourceTree = "<group>"; };
 		E759E52FBEBBED6D94C9312806AF7ADE /* FIRStoragePath.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRStoragePath.m; path = Firebase/Storage/FIRStoragePath.m; sourceTree = "<group>"; };
 		E76205CE810D09283A02A73C76CED46E /* GTMSessionUploadFetcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMSessionUploadFetcher.h; path = Source/GTMSessionUploadFetcher.h; sourceTree = "<group>"; };
@@ -2079,6 +2081,7 @@
 		E73964C21F9790AA00114339 /* Swift */ = {
 			isa = PBXGroup;
 			children = (
+				E73964C51F9793D200114339 /* Optional.swift */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -2735,6 +2738,7 @@
 				F4097449F339D5D783C42E3AC13CBFE4 /* FTupleSetIdPath.m in Sources */,
 				C71F502032A1BA877300E89B19FC8F7C /* FTupleStringNode.m in Sources */,
 				C40F02A65BB198D471BE77A3D5986D09 /* FTupleTransaction.m in Sources */,
+				E73964C61F9793D200114339 /* Optional.swift in Sources */,
 				045E820362D66C38F51192FE97482154 /* FTupleTSN.m in Sources */,
 				B614F9965BDD9B804987E07715C10142 /* FTupleUserCallback.m in Sources */,
 				E6115D0375D142B7542A544654B17F8F /* FUtilities.m in Sources */,
