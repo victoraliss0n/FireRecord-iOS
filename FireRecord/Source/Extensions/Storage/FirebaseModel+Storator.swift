@@ -47,10 +47,11 @@ public extension Storator where Self: FirebaseModel {
             
             // Cast to OptionalProtocol because swift(4.0) still can't infer that FirebaseImage?.self is FirebaseStorable?.Type.
             if let optionalProperty = propertyValue as? OptionalProtocol,
-                optionalProperty.wrappedType() is FirebaseStorable.Type {
-                let firebaseImage = FirebaseImage()
-                firebaseImage.path = modelDictionary?[name] as? String
-                storables[name] = firebaseImage
+                let propertyType = optionalProperty.wrappedType() as? FirebaseStorable.Type {
+                
+                var firebaseStorable = propertyType.init()
+                firebaseStorable.path = modelDictionary?[name] as? String
+                storables[name] = firebaseStorable
             }
         }
         
