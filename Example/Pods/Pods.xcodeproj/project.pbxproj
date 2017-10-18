@@ -468,6 +468,7 @@
 		E6672EA3EB5EBA505C47D26300BFBA0E /* NSDecimalNumberTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3993FA250F69F4856BC13A93E77B48B7 /* NSDecimalNumberTransform.swift */; };
 		E6BCA32511DE3C9A2E7615207C7171B2 /* Pods-FireRecord_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EFA7110A461D2D8509B0555D89B3C45F /* Pods-FireRecord_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E6E9BCBBA085EB13CA49A579489A3C2A /* FTuplePathValue.m in Sources */ = {isa = PBXBuildFile; fileRef = ED584B149822B6B5D0965254F61735AF /* FTuplePathValue.m */; };
+		E73964C41F97911E00114339 /* OptionalProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73964C31F97911E00114339 /* OptionalProtocol.swift */; };
 		E7B24A928ED5CD423BAE6483852DA4C7 /* FIRBundleUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ADA15BE562EFD0FBFCEB4EEC51EB8F9 /* FIRBundleUtil.m */; };
 		E85E1D1DA6700414F5A7B07A4D8EA89C /* FIRStorageTaskSnapshot_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 4283C5E449231496E9768D9E11AE0566 /* FIRStorageTaskSnapshot_Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E86379A883CE620B6B4AB7F0123842B3 /* ExtendCustomModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07C4A7CBFF25E18389543A937D15235 /* ExtendCustomModelType.swift */; };
@@ -1102,6 +1103,7 @@
 		E5617350E5FE12AF328B4054FF5EE0E7 /* OtherExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OtherExtension.swift; path = Source/OtherExtension.swift; sourceTree = "<group>"; };
 		E65AC8E83F8E2192998C67210FAB017A /* FIRDatabaseReference_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRDatabaseReference_Private.h; path = Firebase/Database/Api/Private/FIRDatabaseReference_Private.h; sourceTree = "<group>"; };
 		E6CBE1BA04E46F96F1FF664F25CE384F /* Pods-FireRecord_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FireRecord_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		E73964C31F97911E00114339 /* OptionalProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalProtocol.swift; sourceTree = "<group>"; };
 		E7520444EBFA041E75B56A94BFFF8338 /* FPruneForest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FPruneForest.h; path = Firebase/Database/Persistence/FPruneForest.h; sourceTree = "<group>"; };
 		E759E52FBEBBED6D94C9312806AF7ADE /* FIRStoragePath.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRStoragePath.m; path = Firebase/Storage/FIRStoragePath.m; sourceTree = "<group>"; };
 		E76205CE810D09283A02A73C76CED46E /* GTMSessionUploadFetcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMSessionUploadFetcher.h; path = Source/GTMSessionUploadFetcher.h; sourceTree = "<group>"; };
@@ -2069,6 +2071,7 @@
 		E73964C11F97909600114339 /* Swift */ = {
 			isa = PBXGroup;
 			children = (
+				E73964C31F97911E00114339 /* OptionalProtocol.swift */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -2548,6 +2551,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0900;
+				TargetAttributes = {
+					8F73AF64703C5999BD0D766DC876471A = {
+						LastSwiftMigration = 0900;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -2620,6 +2628,7 @@
 				03CC841114FE2CF5227B23D5005111EF /* FEmptyNode.m in Sources */,
 				A84F25C9EF68DE6D2CCAE5D70C660B4F /* FEventEmitter.m in Sources */,
 				9125485A743C041DAC4B2920F337F83F /* FEventGenerator.m in Sources */,
+				E73964C41F97911E00114339 /* OptionalProtocol.swift in Sources */,
 				885EFE7208BD16FB64469E0BAD4982F8 /* FEventRaiser.m in Sources */,
 				3C585D6E7ADD94FB769669A6B238173B /* FImmutableSortedDictionary.m in Sources */,
 				EA5D05EA9FD7C744CA92ED95D959DBC5 /* FImmutableSortedSet.m in Sources */,
@@ -3411,6 +3420,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8ACEF5487EF0EF99C8E3BA35AD55D638 /* FirebaseCommunity.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -3518,6 +3528,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8ACEF5487EF0EF99C8E3BA35AD55D638 /* FirebaseCommunity.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -3540,6 +3551,7 @@
 				PRODUCT_NAME = FirebaseCommunity;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
