@@ -19,11 +19,12 @@ public extension Storator where Self: FirebaseModel {
         for (name, value) in selfMirror.children {
             guard let name = name else { continue }
             
-            if let firebaseImage = value as? FirebaseImage {
+            //This aditional cast to Anyobject is needed because of this swift bug: https://bugs.swift.org/browse/SR-3871
+            if let firebaseStorable = value as? AnyObject as? FirebaseStorable {
                 let uniqueId = NSUUID().uuidString
                 let storagePath = "FireRecord/\(Self.className)/\(Self.autoId)/\(name)-\(uniqueId)"
                 
-                possibleUploads.append(firebaseImage.buildUploadOperation(fileName: name, path: storagePath))
+                possibleUploads.append(firebaseStorable.buildUploadOperation(fileName: name, path: storagePath))
             }
         }
         
@@ -44,10 +45,13 @@ public extension Storator where Self: FirebaseModel {
         for (name, propertyValue) in selfMirror.children {
             guard let name = name else { continue }
             
-            if type(of: propertyValue) is FirebaseImage?.Type {
-                let firebaseImage = FirebaseImage()
-                firebaseImage.path = modelDictionary?[name] as? String
-                storables[name] = firebaseImage
+            // Cast to OptionalProtocol because swift(4.0) still can't infer that FirebaseImage?.self is FirebaseStorable?.Type.
+            if let optionalProperty = propertyValue as? OptionalProtocol,
+                let propertyType = optionalProperty.wrappedType() as? FirebaseStorable.Type {
+                
+                var firebaseStorable = propertyType.init()
+                firebaseStorable.path = modelDictionary?[name] as? String
+                storables[name] = firebaseStorable
             }
         }
         
