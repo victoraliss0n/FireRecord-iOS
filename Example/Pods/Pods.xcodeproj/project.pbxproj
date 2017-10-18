@@ -1746,6 +1746,7 @@
 		D3D526DE54CF762A46FABAC892FEC025 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				E73964C11F97909600114339 /* Swift */,
 				CBF0D2DC32FB4A7660C0A855D7CBEFCB /* Database */,
 				8C2DC12FEDDD92F0668235B6B0CDCCDF /* Storage */,
 			);
@@ -2065,6 +2066,20 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
+		E73964C11F97909600114339 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
+		E73964C21F9790AA00114339 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
 		EE48D4725C6D004F42F88E2D93CE16F0 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -2082,6 +2097,7 @@
 		EE6EADE0A2CA9FD1B5A9885901BFC766 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E73964C21F9790AA00114339 /* Swift */,
 				93D23F207E4AF71438FDA245DF3E599C /* Database */,
 				9E79666EF470F7F6234D2FFF020F27BE /* General */,
 				688F3109A2A8729AD92C7E2ADD56134C /* Storage */,
