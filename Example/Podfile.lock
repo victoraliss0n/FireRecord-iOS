@@ -25,7 +25,7 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   FireRecord:
-    :path: "../"
+    :path: ../
 
 SPEC CHECKSUMS:
   FirebaseCommunity: 577bff60785dfe3fb214c8d3993477fc44286fb6
@@ -37,4 +37,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 40b56b7472087d7f6b3970d38cc75fcca36753d7
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.4.0.beta.1
