@@ -8,7 +8,7 @@
 import Foundation
 
 extension Orderable where Self: FireRecord {
-    public static func order(byProperty property: PartialKeyPath<Self>) -> Self.Type {
+    public static func order(by property: PartialKeyPath<Self>) -> Self.Type {
         
         if let propertyLabel = property._kvcKeyPathString {
             Self.fireRecordQuery = Self.classPath.queryOrdered(byChild: propertyLabel)
