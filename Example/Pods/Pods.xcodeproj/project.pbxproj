@@ -441,6 +441,7 @@
 		DAA31D491F9D0FD50038AF9D /* ModelType+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA31D481F9D0FD50038AF9D /* ModelType+Extension.swift */; };
 		DAA31D4B1F9D10700038AF9D /* RealTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA31D4A1F9D10700038AF9D /* RealTime.swift */; };
 		DAA31D4E1F9D11230038AF9D /* PropertyEventType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA31D4D1F9D11230038AF9D /* PropertyEventType.swift */; };
+		DAA31D501F9D1DE10038AF9D /* Serializable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA31D4F1F9D1DE10038AF9D /* Serializable+Extension.swift */; };
 		DB0C5E57C415AA7F185406943E612FD6 /* FValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8D03AA7FA1B7131A58CCC7E36A0621 /* FValidation.m */; };
 		DBC95866748384ABA36E0B7AB76CBCAB /* NSDecimalNumberTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3993FA250F69F4856BC13A93E77B48B7 /* NSDecimalNumberTransform.swift */; };
 		DC8BEBB08A3FF0229CDDECB2BE60DCF2 /* FViewProcessorResult.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E93E732D895A7908911215756AB56A /* FViewProcessorResult.m */; };
@@ -1101,6 +1102,7 @@
 		DAA31D481F9D0FD50038AF9D /* ModelType+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ModelType+Extension.swift"; sourceTree = "<group>"; };
 		DAA31D4A1F9D10700038AF9D /* RealTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTime.swift; sourceTree = "<group>"; };
 		DAA31D4D1F9D11230038AF9D /* PropertyEventType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PropertyEventType.swift; path = ../FireRecord/Source/Enums/PropertyEventType.swift; sourceTree = "<group>"; };
+		DAA31D4F1F9D1DE10038AF9D /* Serializable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Serializable+Extension.swift"; sourceTree = "<group>"; };
 		DAE8A1DA7693095D1A2F77DFBED75117 /* FTupleCallbackStatus.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FTupleCallbackStatus.h; path = Firebase/Database/Utilities/Tuples/FTupleCallbackStatus.h; sourceTree = "<group>"; };
 		DB58FD020349B81D59B838766B7D4E0C /* FIRDatabaseQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRDatabaseQuery.h; path = Firebase/Database/Public/FIRDatabaseQuery.h; sourceTree = "<group>"; };
 		DBC8A3D3824943C6F5F0A8ACC85A44F6 /* Pods-FireRecord_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FireRecord_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1715,6 +1717,8 @@
 		B46E392D352D8D24A00F3B2001F3BAA7 /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				DAA31D4F1F9D1DE10038AF9D /* Serializable+Extension.swift */,
+				DAA31D481F9D0FD50038AF9D /* ModelType+Extension.swift */,
 				A6AC8A7147F7EE9BA495F14E4A3A1EC7 /* Deletable+FirebaseModel.swift */,
 				D633798F951E7A4F81155F65DFD7FBE9 /* Filterable+FirebaseModel.swift */,
 				CF2357235202D49E9BACB21A5F59C628 /* FirebaseModel+Extension.swift */,
@@ -1726,7 +1730,6 @@
 				36DB1CCE2DC6967D15300B261B7D2C32 /* Updatable+FirebaseModel.swift */,
 				576AD29D73199F5B0530413A9E7AF1FB /* Writeable+FirebaseModel.swift */,
 				7C9B164C6DC0D0D5F55D1688CFF617E7 /* RealTime */,
-				DAA31D481F9D0FD50038AF9D /* ModelType+Extension.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -2806,6 +2809,7 @@
 				4A2C21004EEE4C9E210C65B5F05E2327 /* Updatable.swift in Sources */,
 				CA80FB48300CBE41315A0D5F1232EF1B /* Uploadable+Extension.swift in Sources */,
 				450B612C91AC9384C182DB6A83272DF5 /* Uploadable.swift in Sources */,
+				DAA31D501F9D1DE10038AF9D /* Serializable+Extension.swift in Sources */,
 				5B8B5425E86CA36BDA2D01B8CA884B8B /* UploadOperation.swift in Sources */,
 				DAA31D4E1F9D11230038AF9D /* PropertyEventType.swift in Sources */,
 				637E8A8C1648CE1DC80D33DB244AA113 /* UploadOperationQueue.swift in Sources */,

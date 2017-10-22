@@ -10,7 +10,7 @@ import FirebaseCommunity
 
 public protocol ReadableInRealTime: Limitable, Orderable, FilterableInRealTime {
     
-    @discardableResult static func observeAll(completion: @escaping (_ objects: [FireRecordType]) -> Void) -> DatabaseHandle
+    static func observeAll(completion: @escaping (_ objects: [FireRecordType]) -> Void) -> DatabaseHandle
     static func observeFind(completion: @escaping (_ objects: [FireRecordType]) -> Void) -> DatabaseHandle
     
 }

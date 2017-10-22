@@ -20,9 +20,6 @@ public extension FirebaseModel {
     internal static var autoId: String {
         return Self.reference.childByAutoId().key
     }
-    func toJSONObject() -> JSON? {
-        return toJSON()
-    }
     internal static func getFirebaseModels(_ snapshot: DataSnapshot) -> [Self] {
         let snapshots = snapshot.children.allObjects.flatMap { $0 as? DataSnapshot }
         let keys = snapshots.map { $0.key }
