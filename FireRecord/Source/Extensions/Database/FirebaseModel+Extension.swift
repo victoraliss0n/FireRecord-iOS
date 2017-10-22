@@ -17,9 +17,6 @@ public extension FirebaseModel {
     static var reference: DatabaseReference {
         return Database.database().reference()
     }
-    internal static var className: String {
-        return String(describing: self)
-    }
     internal static var autoId: String {
         return Self.reference.childByAutoId().key
     }
@@ -27,10 +24,10 @@ public extension FirebaseModel {
         return toJSON()
     }
     internal static func getFirebaseModels(_ snapshot: DataSnapshot) -> [Self] {
-        let snapshots = snapshot.children.allObjects.flatMap {$0 as? DataSnapshot}
+        let snapshots = snapshot.children.allObjects.flatMap { $0 as? DataSnapshot }
         let keys = snapshots.map { $0.key }
         
-        let firebaseModels = ( snapshots.flatMap{ Self.deserialize(from: $0.value as? NSDictionary) })
+        let firebaseModels = (snapshots.flatMap { Self.deserialize(from: $0.value as? NSDictionary) })
             .enumerated()
             .flatMap { index, model -> Self in
                 model.key = keys[index]

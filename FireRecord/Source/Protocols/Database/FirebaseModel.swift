@@ -7,7 +7,7 @@
 import Foundation
 import FirebaseCommunity
 
-public protocol FirebaseModel: ModelType where Reference == DatabaseReference  {
+public protocol FirebaseModel: ModelType, RealTime, Serializable, Storator where Reference == DatabaseReference  {
     var key: String? { get set }
     
     static var fireRecordReference: DatabaseReference? {get set}
