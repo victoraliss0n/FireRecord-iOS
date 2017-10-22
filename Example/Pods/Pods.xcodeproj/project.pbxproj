@@ -440,8 +440,8 @@
 		DA8C24F436879736D24428B705A98983 /* FirebaseStorable+Uploadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC7E7E29A2CD4BE48A6CD677C55E08 /* FirebaseStorable+Uploadable.swift */; };
 		DAA31D491F9D0FD50038AF9D /* ModelType+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA31D481F9D0FD50038AF9D /* ModelType+Extension.swift */; };
 		DAA31D4B1F9D10700038AF9D /* RealTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA31D4A1F9D10700038AF9D /* RealTime.swift */; };
-		DAA31D4E1F9D11230038AF9D /* PropertyEventType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA31D4D1F9D11230038AF9D /* PropertyEventType.swift */; };
 		DAA31D501F9D1DE10038AF9D /* Serializable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA31D4F1F9D1DE10038AF9D /* Serializable+Extension.swift */; };
+		DABFBA591F9D295E00D6913F /* PropertyEventType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABFBA581F9D293200D6913F /* PropertyEventType.swift */; };
 		DB0C5E57C415AA7F185406943E612FD6 /* FValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8D03AA7FA1B7131A58CCC7E36A0621 /* FValidation.m */; };
 		DBC95866748384ABA36E0B7AB76CBCAB /* NSDecimalNumberTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3993FA250F69F4856BC13A93E77B48B7 /* NSDecimalNumberTransform.swift */; };
 		DC8BEBB08A3FF0229CDDECB2BE60DCF2 /* FViewProcessorResult.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E93E732D895A7908911215756AB56A /* FViewProcessorResult.m */; };
@@ -1101,8 +1101,8 @@
 		DA381AA07B66214747562E64CE5D1213 /* FNodeFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FNodeFilter.h; path = Firebase/Database/Core/View/Filter/FNodeFilter.h; sourceTree = "<group>"; };
 		DAA31D481F9D0FD50038AF9D /* ModelType+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ModelType+Extension.swift"; sourceTree = "<group>"; };
 		DAA31D4A1F9D10700038AF9D /* RealTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTime.swift; sourceTree = "<group>"; };
-		DAA31D4D1F9D11230038AF9D /* PropertyEventType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PropertyEventType.swift; path = ../FireRecord/Source/Enums/PropertyEventType.swift; sourceTree = "<group>"; };
 		DAA31D4F1F9D1DE10038AF9D /* Serializable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Serializable+Extension.swift"; sourceTree = "<group>"; };
+		DABFBA581F9D293200D6913F /* PropertyEventType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PropertyEventType.swift; path = ../FireRecord/Source/Enums/PropertyEventType.swift; sourceTree = "<group>"; };
 		DAE8A1DA7693095D1A2F77DFBED75117 /* FTupleCallbackStatus.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FTupleCallbackStatus.h; path = Firebase/Database/Utilities/Tuples/FTupleCallbackStatus.h; sourceTree = "<group>"; };
 		DB58FD020349B81D59B838766B7D4E0C /* FIRDatabaseQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRDatabaseQuery.h; path = Firebase/Database/Public/FIRDatabaseQuery.h; sourceTree = "<group>"; };
 		DBC8A3D3824943C6F5F0A8ACC85A44F6 /* Pods-FireRecord_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FireRecord_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1399,7 +1399,7 @@
 				3C869CD1DE1D780B7661D5861D3EEC76 /* FireRecordApp.swift */,
 				3143F6E800EDB01DD82F64C750EA0765 /* UploadOperation.swift */,
 				6A96D5E695A7D14AA97846615167777B /* UploadOperationQueue.swift */,
-				DAA31D4C1F9D10C40038AF9D /* Enums */,
+				DABFBA571F9D292800D6913F /* Enums */,
 				FFDC1C7683046425D984CEF29A504D75 /* Extensions */,
 				6D2C5D6B47A6AA48026442444C1BA2BB /* Protocols */,
 				BA457C4DE2234188A54D89BB89651202 /* Support Files */,
@@ -1782,10 +1782,10 @@
 			path = FirebaseCommunity;
 			sourceTree = "<group>";
 		};
-		DAA31D4C1F9D10C40038AF9D /* Enums */ = {
+		DABFBA571F9D292800D6913F /* Enums */ = {
 			isa = PBXGroup;
 			children = (
-				DAA31D4D1F9D11230038AF9D /* PropertyEventType.swift */,
+				DABFBA581F9D293200D6913F /* PropertyEventType.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -2775,6 +2775,7 @@
 				535C1DBFFDD490F0FFBAE099D88693C2 /* Filterable.swift in Sources */,
 				34BB29AA865C46818C78FD7E5FA4171C /* FilterableInRealTime+FirebaseModel.swift in Sources */,
 				D7C1FA4DA9EE22F824535E6E328FE858 /* FilterableInRealTime.swift in Sources */,
+				DABFBA591F9D295E00D6913F /* PropertyEventType.swift in Sources */,
 				A5DDE6E19262AF940B6BB3E200EB7F0A /* FirebaseFile.swift in Sources */,
 				F911D74005F40FB82954DE5CE905F3C8 /* FirebaseImage.swift in Sources */,
 				6343CD7D58B48D76008A37D2D7FC1B3D /* FirebaseModel+Extension.swift in Sources */,
@@ -2811,7 +2812,6 @@
 				450B612C91AC9384C182DB6A83272DF5 /* Uploadable.swift in Sources */,
 				DAA31D501F9D1DE10038AF9D /* Serializable+Extension.swift in Sources */,
 				5B8B5425E86CA36BDA2D01B8CA884B8B /* UploadOperation.swift in Sources */,
-				DAA31D4E1F9D11230038AF9D /* PropertyEventType.swift in Sources */,
 				637E8A8C1648CE1DC80D33DB244AA113 /* UploadOperationQueue.swift in Sources */,
 				DAA31D491F9D0FD50038AF9D /* ModelType+Extension.swift in Sources */,
 				D08898C8A9C14D8790C6A1F709BEBC84 /* Writeable+FirebaseModel.swift in Sources */,

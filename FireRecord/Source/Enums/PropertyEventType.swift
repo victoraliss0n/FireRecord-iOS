@@ -17,16 +17,16 @@ public enum PropertyEventType {
     
     public var rawValue: DataEventType {
         switch self {
-        case .propertyAdded:
-            return DataEventType.childAdded
-        case .propertyRemoved:
-            return DataEventType.childRemoved
-        case .propertyChanged:
-            return DataEventType.childChanged
-        case .propertyMoved:
-            return DataEventType.childMoved
-        case .anyChange:
-            return DataEventType.value
+            case .propertyAdded:
+                return DataEventType.childAdded
+            case .propertyRemoved:
+                return DataEventType.childRemoved
+            case .propertyChanged:
+                return DataEventType.childChanged
+            case .propertyMoved:
+                return DataEventType.childMoved
+            case .anyChange:
+                return DataEventType.value
         }
     }
 }
