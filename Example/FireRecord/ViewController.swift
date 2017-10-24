@@ -18,73 +18,42 @@ class ViewController: UIViewController {
         
         user.name = "Victor"
         user.photo = FirebaseImage(#imageLiteral(resourceName: "Image"))
-        
-        User.findFirst { user in
-            print(user.name ?? "Empty")
+        user.save { error in
+            print(error?.localizedDescription ?? "No type of error")
         }
-        User.observeFindFirst { user in
-            print(user.name ?? "Empty")
-        }
-        User.all { users in
-            users.forEach {print($0.name ?? "Empty")}
-        }
-        User.observeAll { users in
-            users.forEach {print($0.name ?? "Empty")}
-        }
-        User.findLast(2) { users in
-            users.forEach { print($0.name ?? "Empty") }
-        }
-        User.observeFindLast(2) { users in
-            users.forEach { print($0.name ?? "Empty") }
-        }
-        
-        let errorMessage = "Does not contain error"
-
-        user.save { error in print(error ?? errorMessage)}
-        user.destroy { error in print(error ?? errorMessage)}
-
-        User.findFirst { user in
-            user.name = "Alisson"
+        User.findFirst(when: .anyChange) { user in
+            user.name = "Mangueira"
             user.update(completion: { error in
-                print(error ?? "")
+                print(error?.localizedDescription ?? "No type of error")
             })
         }
-        User.findLast { user in
-            print(user.name ?? "Does not contain name")
+        User.order(by: \User.name).find(when: .anyChange) { users in
+            users.forEach { print($0.name ?? "Empty") }
         }
-
-        User.order(byProperty: "name").where(value: "alisson3").find { users in
-            users.forEach {print($0.name ?? "Property not present")}
-        }
-        Professional.order(byProperty: "phone").where(value: "98984933").find { professionals in
-            professionals.forEach {print($0.phone ?? "Property not present")}
-        }
-        User.order(byProperty: "name").findLast { user in
-            print(user.name ?? "Property not present")
-        }
-        User.order(byProperty: "name").findLast(3) { users in
-            print(users.count)
-        }
-        User.order(byProperty: "name").findFirst { user in
-            print(user.name ?? "Property not present")
-        }
-        User.order(byProperty: "name").findFirst(3) { users in
-            print(users.count)
-        }
-        User.orderByValue().findFirst(1) { users in
-            print(users.count)
-        }
-        User.order(byProperty: "name")
+        User.order(by: \User.name)
             .start(atValue: "Alisson")
             .end(atValue: "Victor")
-            .observeFind { users in
-                users.forEach { print($0.name ?? "Empty Property") }
+            .find(when: .anyChange) { users in
+                users.forEach { print($0.name ?? "Empty") }
         }
-        
-        User.order(byProperty: \User.name).findFirst { user in
-            print(user.name ?? "empty")
+        User.findLast(when: .anyChange) { user in
+            print(user.name ?? "Empty")
+        }
+        User.findFirst(when: .propertyAdded) { user in
+            print(user.name ?? "Empty")
+        }
+        User.order(by: \User.name).where(value: "Alisson").observeAll(when: .anyChange) { users in
+            users.forEach { print($0.name ?? "Empty") }
+        }
+        User.order(by: \User.name).observeFindFirst(when: .anyChange) { user in
+            print(user.name ?? "Empty")
+        }
+        User.observeAll(when: .propertyRemoved) { users in
+            users.forEach { print($0.name ?? "Empty") }
         }
     }
+    
+    
 }
 class User: FireRecord {
     
