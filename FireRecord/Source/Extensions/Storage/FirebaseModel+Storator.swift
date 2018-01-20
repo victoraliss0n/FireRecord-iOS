@@ -13,7 +13,6 @@ public extension Storator where Self: FirebaseModel {
     
     func uploadFiles(completion: @escaping ([NameAndUrl?]) -> Void) {
         let selfMirror = Mirror(reflecting: self)
-        
         var possibleUploads = [UploadOperation?]()
         
         for (name, value) in selfMirror.children {

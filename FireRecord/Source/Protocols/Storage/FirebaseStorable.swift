@@ -11,6 +11,8 @@ import HandyJSON
 
 open class FirebaseStorable: Storable  {
     
+    var onProgress: ProgressObserver?
+    
     public var path: String?
     public var data: Data?
     
@@ -18,5 +20,9 @@ open class FirebaseStorable: Storable  {
     
     public func mapping(mapper: HelpingMapper) {
         mapper >>> data
+    }
+    
+    public func observeUploadProgress(onProgress: @escaping ProgressObserver) {
+        self.onProgress = onProgress
     }
 }
