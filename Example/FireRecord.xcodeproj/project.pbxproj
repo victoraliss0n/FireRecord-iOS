@@ -223,6 +223,7 @@
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = L9XL5HW2NB;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -585,6 +586,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5EBC0017F787159A91993627 /* Pods-FireRecord_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = L9XL5HW2NB;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -606,6 +608,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 07E12838650A987CD7D04561 /* Pods-FireRecord_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = L9XL5HW2NB;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
