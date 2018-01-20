@@ -9,6 +9,7 @@ import Foundation
 
 public protocol Uploadable {
     
+    var path: String? { get set }
     var data: Data? { get }
     
     func upload(fileName: String, path: String)

@@ -6,20 +6,14 @@
 //
 
 import Foundation
-import HandyJSON
 
 open class FirebaseImage: FirebaseStorable {
     
-    public var path: String?
-    public var data: Data?
-    
-    public required init() {}
-    
     public init(_ image: UIImage) {
+        super.init()
         self.data = UIImagePNGRepresentation(image)
     }
     
-    public func mapping(mapper: HelpingMapper) {
-        mapper >>> data
+    public required init() {
     }
 }

@@ -7,8 +7,16 @@
 
 import Foundation
 import FirebaseCommunity
+import HandyJSON
 
-public protocol FirebaseStorable: Storable  {
+open class FirebaseStorable: Storable  {
     
-    var path: String? { get set }
+    public var path: String?
+    public var data: Data?
+    
+    public required init() {}
+    
+    public func mapping(mapper: HelpingMapper) {
+        mapper >>> data
+    }
 }
