@@ -14,10 +14,10 @@ extension Uploadable where Self: FirebaseStorable {
         }
         
         let reference =  Self.reference.child(path)
-        return UploadOperation(data: data, name: fileName, reference: reference)
+        return UploadOperation(data: data, name: fileName, reference: reference, progressObserver: onProgress)
     }
     
     public func upload(fileName: String, path: String, onProgress: ProgressObserver? = nil) {
-        buildUploadOperation(fileName: fileName, path: path)?.execute()
+        buildUploadOperation(fileName: fileName, path: path, onProgress: onProgress)?.execute()
     }
 }

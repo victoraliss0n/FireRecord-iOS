@@ -15,11 +15,13 @@ public class UploadOperation {
     let fileName: String
     let reference: StorageReference
     var completion: ((_ result: NameAndUrl?) -> Void)?
+    var progressObserver: ProgressObserver?
     
-    init(data: Data, name: String, reference: StorageReference) {
+    init(data: Data, name: String, reference: StorageReference, progressObserver: ProgressObserver? = nil) {
         self.data = data
         self.fileName = name
         self.reference = reference
+        self.progressObserver = progressObserver
     }
  
     func execute() {
@@ -44,6 +46,16 @@ public class UploadOperation {
                 //TODO: Return an error
             }
         }
+        
+        if let progressObserver = progressObserver {
+            uploadTask.observe(.progress) { snapshot in
+                let percentComplete = 100.0 * Double(snapshot.progress!.completedUnitCount)
+                    / Double(snapshot.progress!.totalUnitCount)
+                
+                progressObserver(percentComplete)
+            }
+        }
+        
         uploadTask.resume()
     }
 }

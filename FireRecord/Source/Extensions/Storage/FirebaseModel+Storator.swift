@@ -23,7 +23,7 @@ public extension Storator where Self: FirebaseModel {
                 let uniqueId = NSUUID().uuidString
                 let storagePath = "FireRecord/\(Self.className)/\(Self.autoId)/\(name)-\(uniqueId)"
                 
-                possibleUploads.append(firebaseStorable.buildUploadOperation(fileName: name, path: storagePath))
+                possibleUploads.append(firebaseStorable.buildUploadOperation(fileName: name, path: storagePath, onProgress: firebaseStorable.onProgress))
             }
         }
         
