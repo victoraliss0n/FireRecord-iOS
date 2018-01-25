@@ -16,4 +16,5 @@ public protocol Uploadable {
     
     func upload(fileName: String, path: String, onProgress: ProgressObserver?)
     func observeUploadProgress(onProgress: @escaping (_ progress: Double) -> Void)
+    func removeUploadProgress()
 }

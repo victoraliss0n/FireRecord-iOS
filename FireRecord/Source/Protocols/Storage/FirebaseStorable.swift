@@ -21,8 +21,4 @@ open class FirebaseStorable: Storable  {
     public func mapping(mapper: HelpingMapper) {
         mapper >>> data
     }
-    
-    public func observeUploadProgress(onProgress: @escaping ProgressObserver) {
-        self.onProgress = onProgress
-    }
 }

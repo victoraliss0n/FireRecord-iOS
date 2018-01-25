@@ -20,4 +20,13 @@ extension Uploadable where Self: FirebaseStorable {
     public func upload(fileName: String, path: String, onProgress: ProgressObserver? = nil) {
         buildUploadOperation(fileName: fileName, path: path, onProgress: onProgress)?.execute()
     }
+    
+    public func observeUploadProgress(onProgress: @escaping ProgressObserver) {
+        self.onProgress = onProgress
+    }
+    
+    public func removeUploadProgress() {
+        self.onProgress = nil
+    }
+
 }
