@@ -13,7 +13,6 @@ public extension Storator where Self: FirebaseModel {
     
     func uploadFiles(completion: @escaping ([NameAndUrl?]) -> Void) {
         let selfMirror = Mirror(reflecting: self)
-        
         var possibleUploads = [UploadOperation?]()
         
         for (name, value) in selfMirror.children {
@@ -24,7 +23,16 @@ public extension Storator where Self: FirebaseModel {
                 let uniqueId = NSUUID().uuidString
                 let storagePath = "FireRecord/\(Self.className)/\(Self.autoId)/\(name)-\(uniqueId)"
                 
-                possibleUploads.append(firebaseStorable.buildUploadOperation(fileName: name, path: storagePath))
+                firebaseStorable.uploadFinishedCallback = { _ in
+                    firebaseStorable.removeUploadProgress()
+                    firebaseStorable.uploadFinishedCallback = nil
+                }
+                
+                possibleUploads.append(
+                    firebaseStorable.buildUploadOperation(fileName: name,
+                                                          path: storagePath,
+                                                          onProgress: firebaseStorable.onProgress,
+                                                          uploadFinishedCallback: firebaseStorable.uploadFinishedCallback))
             }
         }
         

@@ -10,17 +10,24 @@ import UIKit
 import FireRecord
 import HandyJSON
 
+
 class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let user = User()
-        
+
         user.name = "Victor"
         user.photo = FirebaseImage(#imageLiteral(resourceName: "Image"))
+
+        user.photo?.observeUploadProgress { progress in
+            print("\(progress)% uploaded")
+        }
+
         user.save { error in
             print(error?.localizedDescription ?? "No type of error")
         }
+
         User.findFirst(when: .anyChange) { user in
             user.name = "Mangueira"
             user.update(completion: { error in

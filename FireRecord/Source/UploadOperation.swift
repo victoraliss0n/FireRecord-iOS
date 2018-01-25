@@ -15,11 +15,15 @@ public class UploadOperation {
     let fileName: String
     let reference: StorageReference
     var completion: ((_ result: NameAndUrl?) -> Void)?
+    var progressObserver: ProgressObserver?
+    var uploadFinishedCallback: UploadFinishedCallback?
     
-    init(data: Data, name: String, reference: StorageReference) {
+    init(data: Data, name: String, reference: StorageReference, progressObserver: ProgressObserver? = nil, uploadFinishedCallback: UploadFinishedCallback? = nil) {
         self.data = data
         self.fileName = name
         self.reference = reference
+        self.progressObserver = progressObserver
+        self.uploadFinishedCallback = uploadFinishedCallback
     }
  
     func execute() {
@@ -38,12 +42,40 @@ public class UploadOperation {
                 self.completion?(result)
                 //TODO: return the result
             }
-            if let error = error {
+            if let _ = error {
                 print("error")
                 self.completion?(nil)
                 //TODO: Return an error
             }
         }
+        
+        addObservers(to: uploadTask)
+        
         uploadTask.resume()
+    }
+    
+    func addObservers(to uploadTask: StorageUploadTask) {
+        if let progressObserver = progressObserver {
+            uploadTask.observe(.success) { snapshot in
+                guard let completedProgress = snapshot.progress?.completedUnitCount,
+                    let totalProgress = snapshot.progress?.totalUnitCount else {
+                        fatalError("Could not calculate current percentage progress")
+                }
+                
+                let percentComplete = 100.0 * Double(completedProgress) / Double(totalProgress)
+                
+                progressObserver(percentComplete)
+            }
+        }
+        
+        if let uploadFinishedCallback = uploadFinishedCallback {
+            uploadTask.observe(.success) { _ in
+                uploadFinishedCallback(true)
+            }
+            
+            uploadTask.observe(.failure) { _ in
+                uploadFinishedCallback(false)
+            }
+        }
     }
 }
