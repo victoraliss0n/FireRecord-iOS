@@ -8,13 +8,13 @@
 import Foundation
 
 extension Uploadable where Self: FirebaseStorable {
-    public func buildUploadOperation(fileName: String, path: String, onProgress: ProgressObserver? = nil) -> UploadOperation? {
+    public func buildUploadOperation(fileName: String, path: String, onProgress: ProgressObserver? = nil, uploadFinishedCallback: UploadFinishedCallback? = nil) -> UploadOperation? {
         guard let data = data else {
             return nil
         }
         
         let reference =  Self.reference.child(path)
-        return UploadOperation(data: data, name: fileName, reference: reference, progressObserver: onProgress)
+        return UploadOperation(data: data, name: fileName, reference: reference, progressObserver: onProgress, uploadFinishedCallback: uploadFinishedCallback)
     }
     
     public func upload(fileName: String, path: String, onProgress: ProgressObserver? = nil) {

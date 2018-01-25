@@ -10,6 +10,7 @@ import FirebaseCommunity
 import HandyJSON
 
 open class FirebaseStorable: Storable  {
+    internal var uploadFinishedCallback: UploadFinishedCallback?
     
     var onProgress: ProgressObserver?
     

@@ -8,6 +8,7 @@
 import Foundation
 
 public typealias ProgressObserver = (_ progress: Double) -> Void
+public typealias UploadFinishedCallback  = (_ success: Bool) -> Void
 
 public protocol Uploadable {
     

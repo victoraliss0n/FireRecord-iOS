@@ -16,12 +16,14 @@ public class UploadOperation {
     let reference: StorageReference
     var completion: ((_ result: NameAndUrl?) -> Void)?
     var progressObserver: ProgressObserver?
+    var uploadFinishedCallback: UploadFinishedCallback?
     
-    init(data: Data, name: String, reference: StorageReference, progressObserver: ProgressObserver? = nil) {
+    init(data: Data, name: String, reference: StorageReference, progressObserver: ProgressObserver? = nil, uploadFinishedCallback: UploadFinishedCallback? = nil) {
         self.data = data
         self.fileName = name
         self.reference = reference
         self.progressObserver = progressObserver
+        self.uploadFinishedCallback = uploadFinishedCallback
     }
  
     func execute() {
@@ -47,11 +49,17 @@ public class UploadOperation {
             }
         }
         
+        addObservers(to: uploadTask)
+        
+        uploadTask.resume()
+    }
+    
+    func addObservers(to uploadTask: StorageUploadTask) {
         if let progressObserver = progressObserver {
-            uploadTask.observe(.progress) { snapshot in
+            uploadTask.observe(.success) { snapshot in
                 guard let completedProgress = snapshot.progress?.completedUnitCount,
-                      let totalProgress = snapshot.progress?.totalUnitCount else {
-                    fatalError("Could not calculate current percentage progress")
+                    let totalProgress = snapshot.progress?.totalUnitCount else {
+                        fatalError("Could not calculate current percentage progress")
                 }
                 
                 let percentComplete = 100.0 * Double(completedProgress) / Double(totalProgress)
@@ -60,6 +68,14 @@ public class UploadOperation {
             }
         }
         
-        uploadTask.resume()
+        if let uploadFinishedCallback = uploadFinishedCallback {
+            uploadTask.observe(.success) { _ in
+                uploadFinishedCallback(true)
+            }
+            
+            uploadTask.observe(.failure) { _ in
+                uploadFinishedCallback(false)
+            }
+        }
     }
 }
