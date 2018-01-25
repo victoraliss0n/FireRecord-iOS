@@ -40,7 +40,7 @@ public class UploadOperation {
                 self.completion?(result)
                 //TODO: return the result
             }
-            if let error = error {
+            if let _ = error {
                 print("error")
                 self.completion?(nil)
                 //TODO: Return an error
@@ -49,8 +49,12 @@ public class UploadOperation {
         
         if let progressObserver = progressObserver {
             uploadTask.observe(.progress) { snapshot in
-                let percentComplete = 100.0 * Double(snapshot.progress!.completedUnitCount)
-                    / Double(snapshot.progress!.totalUnitCount)
+                guard let completedProgress = snapshot.progress?.completedUnitCount,
+                      let totalProgress = snapshot.progress?.totalUnitCount else {
+                    fatalError("Could not calculate current percentage progress")
+                }
+                
+                let percentComplete = 100.0 * Double(completedProgress) / Double(totalProgress)
                 
                 progressObserver(percentComplete)
             }
