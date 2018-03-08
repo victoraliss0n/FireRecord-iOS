@@ -10,6 +10,8 @@
 
 FireRecord is a framework written in swift which brings the ActiveRecord architecture as a wrapper to Firebase SDK on iOS. The main idea is to make iOS development with Firebase ([Firestore](https://firebase.google.com/docs/firestore) and [Storage](https://firebase.google.com/docs/storage)) still more productive with the well-known [Active Record Pattern](http://guides.rubyonrails.org/active_record_basics.html) from [Rails community](http://rubyonrails.org/community).
 
+If you liked this library take a look at the [Android Kotlin version](https://github.com/DavidSanf0rd/FireRecord-Android)
+
 ## Example
 
 ### Inherit from FireRecord
