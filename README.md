@@ -7,7 +7,7 @@
 <img src="http://img.shields.io/badge/swift-4.0-brightgreen.svg" alt="Swift 4.0">
 </a>
 
-FireRecord is a framework written in swift which brings the ActiveRecord architecture as a wrapper to Firebase SDK on iOS
+FireRecord is a framework written in swift which brings the ActiveRecord architecture as a wrapper to Firebase SDK on iOS. The main idea is to make iOS development with Firebase ([Firestore](https://firebase.google.com/docs/firestore) and [Storage](https://firebase.google.com/docs/storage)) still more productive with the well-known [Active Record Pattern](http://guides.rubyonrails.org/active_record_basics.html) from [Rails community](http://rubyonrails.org/community).
 
 ## Example
 
@@ -15,9 +15,9 @@ FireRecord is a framework written in swift which brings the ActiveRecord archite
 
 ```swift
 class User: FireRecord {
-var age: Int?
-var name: String?
-var photo: FirebaseImage?
+  var age: Int?
+  var name: String?
+  var photo: FirebaseImage?
 }
 ```
 
@@ -36,23 +36,23 @@ user.save { error in print(error ?? errorMessage) }
 ### Read
 ```swift
 User.all { users in
-users.flatMap{ $0.name }.forEach{ print($0) }
+  users.flatMap{ $0.name }.forEach{ print($0) }
 }
 
 User.findFirst { user in
-print(user.name ?? "First users doesn't have name")
+  print(user.name ?? "First users doesn't have name")
 }
 
 User.findLast { user in
-print(user.name ?? "Last users doesn't have name")
+  print(user.name ?? "Last users doesn't have name")
 }
 
 User.findFirst(3) { users in
-users.forEach { user in print(user.name ?? " User doesn't have name")}
+  users.forEach { user in print(user.name ?? " User doesn't have name")}
 }
 
 User.findLast(3) { users in
-users.forEach { user in print(user.name ?? " User doesn't have name")}
+  users.forEach { user in print(user.name ?? " User doesn't have name")}
 }
 ```
 
@@ -70,28 +70,42 @@ user.destroy { error in print(error ?? errorMessage)}
 ### Query
 ```swift
 User.order(byProperty: "name").where(value: "Alisson").find { users in
-users.flatMap{ $0.name }.forEach{ print($0) }                          //print all names
+  users.flatMap{ $0.name }.forEach{ print($0) }                          //print all names
 }
 
 Professional.order(byProperty: "phone").where(value: "98984933").find { professionals in
-professionals.flatMap{ $0.phone }.forEach{ print($0) }                //print all phones
+  professionals.flatMap{ $0.phone }.forEach{ print($0) }                //print all phones
 }
 
 User.order(byProperty: "name").findLast { user in
-print(user.name ?? "Property not present")
+  print(user.name ?? "Property not present")
 }
 
 User.order(byProperty: "name").findLast(3) { users in
-print(users.count)
+  print(users.count)
 }
 
 User.order(byProperty: "name").findFirst { user in
-print(user.name ?? "Property not present")
+  print(user.name ?? "Property not present")
 }
 ```
 
+## Features
+
+- [x] Basic CRUD functionality with Realtime Database
+- [x] Map queries from Realtime Database
+- [x] Manage image/file properties (send/retrieve from Storage)
+- [x] Add realtime Capabilities
+- [ ] Add relationship mapping
+- [ ] Add offline capabilities
+
+PS: We are going to chage [Realtime Database](https://firebase.google.com/docs/database) for [Cloud Firestore](https://firebase.google.com/docs/firestore) soon. Stay Tunned!
+
+[See open issues for more details](https://github.com/victoraliss0n/FireRecord/issues)
 
 ## Requirements
+
+[Add Firebase to your project](https://firebase.google.com/docs/ios/setup)
 
 ## Installation
 
